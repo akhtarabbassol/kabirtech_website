@@ -1,27 +1,69 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import { useEffect } from 'react';
 
-// Social + canonical tags only. The page's own <Helmet> must keep a literal
-// <title> and <meta name="description">, because the llms.txt build step reads
-// those two tags straight out of the page file's source.
-const Seo = ({ title, description, image, url, siteName, type = 'website' }) => {
-    const canonical = url || window.location.origin + window.location.pathname;
+// Direct DOM head management. react-helmet's commit mechanism does not
+// reliably flush under this app's Vite/React 18 setup (confirmed: it silently
+// no-ops even across a clean dev-server restart), so this manages <head>
+// itself instead of trusting it. The page's own <Helmet><title>/<meta
+// name="description"> block must stay in place regardless — the llms.txt
+// build step statically greps that literal source text, it never runs this.
+function upsertMeta(attr, key, content) {
+    if (content == null) return;
+    let el = document.head.querySelector(`meta[${attr}="${key}"]`);
+    if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+    }
+    el.setAttribute('content', content);
+}
 
-    return (
-        <Helmet>
-            <link rel="canonical" href={canonical} />
-            <meta property="og:url" content={canonical} />
-            <meta property="og:type" content={type} />
-            {siteName && <meta property="og:site_name" content={siteName} />}
-            {title && <meta property="og:title" content={title} />}
-            {description && <meta property="og:description" content={description} />}
-            {image && <meta property="og:image" content={image} />}
-            <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
-            {title && <meta name="twitter:title" content={title} />}
-            {description && <meta name="twitter:description" content={description} />}
-            {image && <meta name="twitter:image" content={image} />}
-        </Helmet>
-    );
+function upsertLink(rel, href) {
+    if (href == null) return;
+    let el = document.head.querySelector(`link[rel="${rel}"]`);
+    if (!el) {
+        el = document.createElement('link');
+        el.setAttribute('rel', rel);
+        document.head.appendChild(el);
+    }
+    el.setAttribute('href', href);
+}
+
+function setJsonLd(schemas) {
+    document.head.querySelectorAll('script[data-seo-jsonld]').forEach(el => el.remove());
+    (schemas || []).forEach(schema => {
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.dataset.seoJsonld = 'true';
+        script.textContent = JSON.stringify(schema);
+        document.head.appendChild(script);
+    });
+}
+
+const Seo = ({ title, description, keywords, image, url, siteName, type = 'website', locale = 'en_US', robots = 'index, follow', jsonLd }) => {
+    useEffect(() => {
+        const canonical = url || window.location.origin + window.location.pathname;
+
+        if (title) document.title = title;
+        upsertMeta('name', 'description', description);
+        upsertMeta('name', 'keywords', keywords);
+        upsertMeta('name', 'robots', robots);
+        upsertLink('canonical', canonical);
+        upsertMeta('property', 'og:url', canonical);
+        upsertMeta('property', 'og:type', type);
+        upsertMeta('property', 'og:locale', locale);
+        upsertMeta('property', 'og:site_name', siteName);
+        upsertMeta('property', 'og:title', title);
+        upsertMeta('property', 'og:description', description);
+        upsertMeta('property', 'og:image', image);
+        upsertMeta('name', 'twitter:card', image ? 'summary_large_image' : 'summary');
+        upsertMeta('name', 'twitter:title', title);
+        upsertMeta('name', 'twitter:description', description);
+        upsertMeta('name', 'twitter:image', image);
+        if (jsonLd) setJsonLd(jsonLd);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [title, description, keywords, image, url, siteName, type, locale, robots, jsonLd]);
+
+    return null;
 }
 
 export default Seo;

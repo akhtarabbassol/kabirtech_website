@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Boxes, BrainCircuit, Cloud, Code2, Cpu, Layers, Mail, MapPin, Menu, Phone, ShieldCheck, Smartphone, X, Check, Loader2 } from 'lucide-react';
+import { Activity, ArrowUpRight, BarChart3, Boxes, Brain, BrainCircuit, Building2, Captions, Clock, Cloud, Code2, Command, Cpu, Database, Factory, FileSearch, GitBranch, GraduationCap, Hash, Headset, Image as ImageIcon, Inbox, Languages, Layers, LineChart, Lock, Mail, Megaphone, MapPin, Menu, Mic, BookOpen, Phone, PenLine, PieChart, Plug, Quote, Repeat, Rocket, CalendarDays, Search, ShieldCheck, ShoppingCart, Smartphone, Sparkles, Star, Target, TrendingUp, Users, Video, Wallet, Workflow, X, Check, Loader2, Youtube, Zap } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import CountUp from '@/components/CountUp';
 import Seo from '@/components/Seo';
@@ -12,6 +12,9 @@ const TEAM_PHOTO = 'https://images.hostinger.com/80be64c8-babc-483d-b736-0c54e03
 const NAV = [{
   label: 'Services',
   href: '#services'
+}, {
+  label: 'Products',
+  href: '#products'
 }, {
   label: 'Work',
   href: '#work'
@@ -53,6 +56,155 @@ const SERVICES = [{
   copy: 'Senior engineers embedded in your process, in your timezone overlap, reporting into your leads — scaled up or down quarterly.',
   points: ['Vetted senior talent', 'Your tooling & rituals', 'Flexible contracts']
 }];
+const PRODUCTS = [{
+  name: 'Postora',
+  tag: 'Social media AI platform',
+  tagline: 'Open any tool — content, images, strategy, analytics, competitors, and more.',
+  copy: 'We built Postora to run our own social presence, then opened it up. Every AI feature below is in production, used daily, not a roadmap slide.',
+  features: [{
+    icon: PenLine,
+    title: 'AI Content Generator',
+    copy: 'Draft platform-ready posts in your brand voice from a short brief.'
+  }, {
+    icon: Captions,
+    title: 'AI Caption Generator',
+    copy: 'Upload an image — Vision describes it, then we write captions per platform.'
+  }, {
+    icon: Hash,
+    title: 'AI Hashtag Generator',
+    copy: 'Generate relevant and low-competition hashtags for your post and industry.'
+  }, {
+    icon: Repeat,
+    title: 'AI Content Repurposing',
+    copy: 'Turn one blog or transcript into LinkedIn, Instagram, YouTube, and more.'
+  }, {
+    icon: BarChart3,
+    title: 'AI Content Analyzer',
+    copy: 'Score hook, readability, engagement, CTA, and hashtags before you publish.'
+  }, {
+    icon: ImageIcon,
+    title: 'AI Image Generator',
+    copy: 'Create on-brand visuals sized for LinkedIn, Instagram, Facebook, and YouTube.'
+  }, {
+    icon: CalendarDays,
+    title: 'AI Content Calendar',
+    copy: 'Plan a week or month of slots with topics, captions, and image prompts.'
+  }, {
+    icon: Target,
+    title: 'AI Social Strategy',
+    copy: 'Build a channel mix, pillars, and ready-to-post content from your goals.'
+  }, {
+    icon: Mic,
+    title: 'AI Brand Voice',
+    copy: 'Set tone, personality, and audience once — every AI draft follows it.'
+  }, {
+    icon: Clock,
+    title: 'AI Best Time to Post',
+    copy: 'See when your audience is most active from engagement history.'
+  }, {
+    icon: LineChart,
+    title: 'AI Analytics Assistant',
+    copy: 'Ask why engagement moved — frequency, mix, timing, and content type.'
+  }, {
+    icon: Search,
+    title: 'AI Competitor Analysis',
+    copy: 'Track competitors and find topics, formats, gaps, and trending themes.'
+  }, {
+    icon: TrendingUp,
+    title: 'AI Trend Detection',
+    copy: 'Spot rising topics with growth signals, then generate a full campaign in one click.'
+  }, {
+    icon: Video,
+    title: 'AI Video Generation',
+    copy: 'Text → script → voice → scenes → subtitles → Reels, Shorts, TikTok, and Facebook Reels.'
+  }, {
+    icon: Youtube,
+    title: 'AI YouTube',
+    copy: 'Topic → research → script → title → description → tags → thumbnail, plus high-CTR title packs.'
+  }, {
+    icon: Languages,
+    title: 'AI Content Translation',
+    copy: 'Localize one post into English, Urdu, Arabic, French, Spanish, German, and Chinese — naturally, not literally.'
+  }, {
+    icon: Megaphone,
+    title: 'AI Campaign Generator',
+    copy: 'From a brief: multi-platform content + schedule — review and Approve Campaign to publish.'
+  }, {
+    icon: Inbox,
+    title: 'AI Social Inbox',
+    copy: 'One inbox for messages, comments, and mentions — AI detects sales leads, drafts replies, and queues CRM actions.'
+  }]
+}, {
+  name: 'AIBOS',
+  tag: 'AI business operating system',
+  tagline: 'Your AI-powered operating system for running a business.',
+  copy: "Instead of switching between your CRM, accounting software and marketing tools, you tell AIBOS what you need — \"prepare this month's business report\" — and it plans the work, pulls the data from every department, and executes it, with approval gates on anything that matters.",
+  features: [{
+    icon: Command,
+    title: 'AI Command Center',
+    copy: 'One conversational interface for the whole business — ask, and it plans and executes across every department.'
+  }, {
+    icon: Workflow,
+    title: 'AI Orchestrator',
+    copy: 'Every request runs through intent detection, planning, agent selection, and permission checks before anything executes.'
+  }, {
+    icon: Users,
+    title: 'Sales Agent',
+    copy: 'Finds high-value leads, drafts follow-ups, and moves opportunities through the pipeline on command.'
+  }, {
+    icon: Wallet,
+    title: 'Finance Agent',
+    copy: 'Surfaces overdue invoices, explains expense swings, and forecasts revenue from your connected accounting data.'
+  }, {
+    icon: Megaphone,
+    title: 'Marketing Agent',
+    copy: 'Builds a full campaign — audience, messaging, content calendar, images and schedule — from one brief.'
+  }, {
+    icon: Headset,
+    title: 'Support Agent',
+    copy: 'Reads a customer request, finds the account and order data, and resolves or routes it automatically.'
+  }, {
+    icon: BookOpen,
+    title: 'AI Knowledge Base',
+    copy: 'Upload your PDFs, policies and product docs — every agent answers from your own business knowledge, tenant-isolated.'
+  }, {
+    icon: FileSearch,
+    title: 'Document Intelligence',
+    copy: 'OCR and extraction turn invoices, contracts and purchase orders into structured, workflow-ready data.'
+  }, {
+    icon: GitBranch,
+    title: 'AI Workflow Builder',
+    copy: 'Describe a process in plain English and the AI generates the trigger-condition-action workflow for you.'
+  }, {
+    icon: PieChart,
+    title: 'Business Intelligence',
+    copy: 'A live dashboard of revenue, expenses and pipeline, with AI-written insights on what changed and why.'
+  }, {
+    icon: Brain,
+    title: 'AI Business Analyst',
+    copy: 'Ask for a full performance review — the AI investigates every department and returns an executive summary with risks and priorities.'
+  }, {
+    icon: ShieldCheck,
+    title: 'Approval System',
+    copy: 'Every AI action is risk-classified — low-risk runs automatically, high-risk always waits for your sign-off.'
+  }, {
+    icon: Database,
+    title: 'AI Memory',
+    copy: "Remembers your preferences and your organization's business rules across every conversation."
+  }, {
+    icon: Lock,
+    title: 'Multi-Tenant Security',
+    copy: 'Role-based permissions, tenant isolation and full audit logs on every AI action — built for enterprise from day one.'
+  }, {
+    icon: Plug,
+    title: 'Integrations Platform',
+    copy: 'Connect Gmail, HubSpot, QuickBooks, Stripe and your social channels — one framework, native to every agent.'
+  }, {
+    icon: Activity,
+    title: 'AI Observability',
+    copy: 'Track every AI call, tool use, token and cost — down to which agent did what and when.'
+  }]
+}];
 const WORK = [{
   image: 'https://images.hostinger.com/94341abb-aeb6-466c-8de3-f1c6f2755954.png',
   tag: 'AI Platform',
@@ -74,6 +226,53 @@ const WORK = [{
   title: 'A compliant patient data platform across 18 clinics',
   copy: 'Unified scheduling, records and billing behind a HIPAA-aligned service layer, with audit trails built in from day one.',
   metrics: [['18', 'clinics migrated'], ['0', 'audit findings']]
+}];
+const COMPLETED = [{
+  icon: ShoppingCart,
+  tag: 'Retail',
+  title: 'Inventory sync across 40 stores',
+  result: 'Real-time stock, zero overselling'
+}, {
+  icon: GraduationCap,
+  tag: 'EdTech',
+  title: 'Adaptive assessment engine for a K-12 platform',
+  result: '210k students onboarded'
+}, {
+  icon: Building2,
+  tag: 'Real Estate',
+  title: 'Lead-to-lease pipeline automation',
+  result: '3x agent throughput'
+}, {
+  icon: Zap,
+  tag: 'Energy',
+  title: 'Grid anomaly detection model',
+  result: '99.4% detection accuracy'
+}, {
+  icon: Factory,
+  tag: 'Manufacturing',
+  title: 'Predictive maintenance for plant floor sensors',
+  result: '18% less unplanned downtime'
+}, {
+  icon: Rocket,
+  tag: 'SaaS',
+  title: 'Multi-tenant billing rebuild on Stripe',
+  result: 'Migrated 6k accounts, zero downtime'
+}];
+const TESTIMONIALS = [{
+  quote: "KabirTech didn't just build what we asked for — they questioned the scope in ways that saved us six figures in year one.",
+  name: 'Priya Desai',
+  role: 'VP Engineering',
+  company: 'Meridian Capital Partners'
+}, {
+  quote: 'Every two weeks we had something to click through, not a status update. That alone changed how we planned the quarter.',
+  name: 'Tom Reyes',
+  role: 'COO',
+  company: 'Northbay Freight'
+}, {
+  quote: 'They handed over runbooks and trained our team like they expected to leave — which is exactly what you want from a vendor.',
+  name: 'Dr. Elena Cho',
+  role: 'CIO',
+  company: 'Aurora Clinics Group'
 }];
 const PROCESS = [{
   n: '01',
@@ -212,7 +411,7 @@ function Hero() {
           delay: 0.24,
           ease: 'easeOut'
         }} className="mt-10 flex flex-col gap-4 sm:flex-row">
-                        <a href="#contact" className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-sky-500 px-8 text-base font-semibold text-white transition-all hover:bg-sky-400 active:scale-[0.98]">
+                        <a href="#contact" className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-sky-500 px-8 text-base font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:bg-sky-400 hover:shadow-sky-400/40 active:scale-[0.98]">
                             Start a project <ArrowUpRight className="h-5 w-5" />
                         </a>
                         <a href="#work" className="inline-flex min-h-[52px] items-center justify-center rounded-full border border-white/20 px-8 text-base font-semibold text-white transition-colors hover:bg-white/10">
@@ -262,10 +461,11 @@ function Hero() {
         </section>;
 }
 function Marquee() {
-  return <div className="overflow-hidden border-y border-border bg-secondary py-5">
+  return <div className="relative overflow-hidden border-y border-border bg-secondary py-5 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
             <div className="kt-marquee-track flex w-max gap-12 whitespace-nowrap">
-                {[...STACK, ...STACK].map((s, i) => <span key={`${s}-${i}`} className="font-display text-sm font-medium uppercase tracking-[0.22em] text-muted-foreground">
+                {[...STACK, ...STACK].map((s, i) => <span key={`${s}-${i}`} className="flex items-center gap-12 font-display text-sm font-medium uppercase tracking-[0.22em] text-muted-foreground">
                         {s}
+                        <span className="h-1 w-1 rounded-full bg-primary/40" aria-hidden="true" />
                     </span>)}
             </div>
         </div>;
@@ -284,19 +484,77 @@ function Services() {
                 </div>
             </Reveal>
 
-            <div className="mt-16 divide-y divide-border border-y border-border">
+            <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {SERVICES.map((s, i) => <Reveal key={s.title} delay={i * 0.05}>
-                        <div className="group grid gap-6 py-9 md:grid-cols-[3rem_1fr_1.1fr_auto] md:items-start md:gap-10">
-                            <s.icon className="h-9 w-9 text-primary" strokeWidth={1.5} />
-                            <h3 className="font-display text-2xl font-semibold tracking-tight">{s.title}</h3>
-                            <p className="text-base leading-relaxed text-muted-foreground">{s.copy}</p>
-                            <ul className="space-y-2">
+                        <div className="group relative h-full overflow-hidden rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10">
+                            <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/0 blur-2xl transition-colors duration-300 group-hover:bg-primary/10" aria-hidden="true" />
+                            <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
+                                <s.icon className="h-6 w-6" strokeWidth={1.5} />
+                            </div>
+                            <h3 className="relative mt-6 font-display text-xl font-semibold tracking-tight">{s.title}</h3>
+                            <p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
+                            <ul className="relative mt-6 space-y-2 border-t border-border pt-5">
                                 {s.points.map(p => <li key={p} className="flex items-center gap-2 text-sm text-foreground/80">
                                         <Check className="h-4 w-4 shrink-0 text-primary" /> {p}
                                     </li>)}
                             </ul>
                         </div>
                     </Reveal>)}
+            </div>
+        </section>;
+}
+function Products() {
+  return <section id="products" className="relative overflow-hidden bg-[hsl(var(--ink))] py-24 lg:py-32">
+            <div className="absolute inset-0 circuit-grid opacity-40" aria-hidden="true" />
+            <div className="absolute -right-32 top-1/4 h-[440px] w-[440px] rounded-full bg-sky-500/15 blur-[140px]" aria-hidden="true" />
+
+            <div className="relative mx-auto max-w-[80rem] px-5 sm:px-8">
+                <Reveal>
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-400">Our products</p>
+                    <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+                        Software we build and run ourselves
+                    </h2>
+                    <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-300">
+                        We don't only ship for clients — we operate our own products in production, so every recommendation
+                        we make is battle-tested on our own infrastructure first.
+                    </p>
+                </Reveal>
+
+                {PRODUCTS.map(p => <div key={p.name} className="mt-14">
+                        <Reveal>
+                            <div className="flex flex-col gap-6 rounded-2xl border border-white/10 bg-white/[0.04] p-7 sm:flex-row sm:items-center sm:justify-between sm:p-9">
+                                <div className="flex items-center gap-4">
+                                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-sky-500/15 text-sky-400">
+                                        <Sparkles className="h-7 w-7" strokeWidth={1.5} />
+                                    </div>
+                                    <div>
+                                        <div className="flex items-center gap-3">
+                                            <h3 className="font-display text-2xl font-bold text-white">{p.name}</h3>
+                                            <span className="rounded-full border border-sky-400/30 bg-sky-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.14em] text-sky-300">{p.tag}</span>
+                                        </div>
+                                        <p className="mt-1 text-sm text-slate-400">{p.tagline}</p>
+                                    </div>
+                                </div>
+                                <a href="#contact" className="inline-flex min-h-[48px] shrink-0 items-center justify-center gap-2 rounded-full border border-white/20 px-6 text-sm font-semibold text-white transition-colors hover:bg-white/10">
+                                    Talk to us about {p.name} <ArrowUpRight className="h-4 w-4" />
+                                </a>
+                            </div>
+                        </Reveal>
+
+                        <p className="relative mt-8 max-w-2xl text-base leading-relaxed text-slate-300">{p.copy}</p>
+
+                        <div className="relative mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                            {p.features.map((f, i) => <Reveal key={f.title} delay={i * 0.03}>
+                                    <div className="group h-full rounded-xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:border-sky-400/30 hover:bg-white/[0.05]">
+                                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-sky-400/10 text-sky-400">
+                                            <f.icon className="h-[18px] w-[18px]" strokeWidth={1.75} />
+                                        </div>
+                                        <h4 className="mt-4 text-sm font-semibold text-white">{f.title}</h4>
+                                        <p className="mt-1.5 text-sm leading-relaxed text-slate-400">{f.copy}</p>
+                                    </div>
+                                </Reveal>)}
+                        </div>
+                    </div>)}
             </div>
         </section>;
 }
@@ -312,7 +570,7 @@ function Work() {
 
                 <div className="mt-16 space-y-6">
                     {WORK.map((w, i) => <Reveal key={w.title} delay={i * 0.06}>
-                            <article className={`grid items-center gap-10 rounded-2xl border border-white/10 bg-white/[0.03] p-6 lg:grid-cols-2 lg:p-10 ${i % 2 ? 'lg:[&>figure]:order-2' : ''}`}>
+                            <article className={`group grid items-center gap-10 rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:border-sky-400/30 hover:bg-white/[0.05] lg:grid-cols-2 lg:p-10 ${i % 2 ? 'lg:[&>figure]:order-2' : ''}`}>
                                 <figure className="overflow-hidden rounded-xl">
                                     <img src={w.image} alt={w.title} className="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-[1.03]" loading="lazy" />
                                 </figure>
@@ -332,11 +590,61 @@ function Work() {
                             </article>
                         </Reveal>)}
                 </div>
+
+                <Reveal>
+                    <p className="mt-20 text-xs font-semibold uppercase tracking-[0.22em] text-sky-400">Also shipped recently</p>
+                </Reveal>
+                <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {COMPLETED.map((c, i) => <Reveal key={c.title} delay={i * 0.04}>
+                            <div className="group flex h-full gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:border-sky-400/30 hover:bg-white/[0.05]">
+                                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-sky-400/10 text-sky-400">
+                                    <c.icon className="h-5 w-5" strokeWidth={1.75} />
+                                </div>
+                                <div>
+                                    <p className="text-xs font-medium uppercase tracking-[0.16em] text-slate-400">{c.tag}</p>
+                                    <h4 className="mt-1.5 text-sm font-semibold leading-snug text-white">{c.title}</h4>
+                                    <p className="mt-1.5 text-xs text-sky-400">{c.result}</p>
+                                </div>
+                            </div>
+                        </Reveal>)}
+                </div>
+            </div>
+        </section>;
+}
+function Testimonials() {
+  return <section className="mx-auto max-w-[80rem] px-5 py-24 sm:px-8 lg:py-32">
+            <Reveal>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">What clients say</p>
+                <h2 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+                    Feedback from the people who signed off on the invoice
+                </h2>
+            </Reveal>
+
+            <div className="mt-16 grid gap-6 lg:grid-cols-3">
+                {TESTIMONIALS.map((t, i) => <Reveal key={t.name} delay={i * 0.06}>
+                        <figure className="flex h-full flex-col rounded-2xl border border-border bg-card p-7">
+                            <Quote className="h-7 w-7 text-primary/40" strokeWidth={1.5} />
+                            <blockquote className="mt-4 flex-1 text-base leading-relaxed text-foreground/90">
+                                "{t.quote}"
+                            </blockquote>
+                            <div className="mt-6 flex items-center gap-1 text-primary" aria-hidden="true">
+                                {Array.from({ length: 5 }).map((_, s) => <Star key={s} className="h-4 w-4 fill-current" />)}
+                            </div>
+                            <figcaption className="mt-3 border-t border-border pt-4">
+                                <p className="font-display text-sm font-semibold">{t.name}</p>
+                                <p className="text-sm text-muted-foreground">{t.role}, {t.company}</p>
+                            </figcaption>
+                        </figure>
+                    </Reveal>)}
             </div>
         </section>;
 }
 function Company() {
-  return <section id="company" className="mx-auto max-w-[80rem] px-5 py-24 sm:px-8 lg:py-32">
+  return <section id="company" className="relative overflow-hidden py-24 lg:py-32">
+            <div className="absolute -left-40 top-0 h-[420px] w-[420px] rounded-full bg-primary/[0.06] blur-[130px]" aria-hidden="true" />
+            <div className="absolute -right-32 bottom-0 h-[360px] w-[360px] rounded-full bg-accent/[0.08] blur-[130px]" aria-hidden="true" />
+
+            <div className="relative mx-auto max-w-[80rem] px-5 sm:px-8">
             <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
                 <Reveal>
                     <img src={TEAM_PHOTO} alt="The KabirTech Solutions engineering team at work" className="w-full rounded-2xl object-cover shadow-xl shadow-slate-900/10" loading="lazy" />
@@ -369,11 +677,14 @@ function Company() {
             <div className="mt-20 grid gap-8 sm:grid-cols-3">
                 {TEAM.map((t, i) => <Reveal key={t.name} delay={i * 0.06}>
                         <div className="group">
-                            <img src={t.img} alt={t.name} className="aspect-[3/4] w-full rounded-xl object-cover grayscale transition-all duration-500 group-hover:grayscale-0" loading="lazy" />
+                            <div className="overflow-hidden rounded-xl">
+                                <img src={t.img} alt={`${t.name}, ${t.role} at KabirTech Solutions`} className="aspect-[3/4] w-full object-cover grayscale transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0" loading="lazy" />
+                            </div>
                             <h3 className="mt-4 font-display text-lg font-semibold">{t.name}</h3>
                             <p className="text-sm text-muted-foreground">{t.role}</p>
                         </div>
                     </Reveal>)}
+            </div>
             </div>
         </section>;
 }
@@ -473,7 +784,7 @@ function Contact() {
 
                             {error && <p className="text-sm text-red-400">{error}</p>}
 
-                            <button type="submit" disabled={status === 'loading'} className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full bg-sky-500 px-8 text-base font-semibold text-white transition-all hover:bg-sky-400 active:scale-[0.98] disabled:opacity-60">
+                            <button type="submit" disabled={status === 'loading'} className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full bg-sky-500 px-8 text-base font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:bg-sky-400 hover:shadow-sky-400/40 active:scale-[0.98] disabled:opacity-60">
                                 {status === 'loading' ? <><Loader2 className="h-5 w-5 animate-spin" /> Sending</> : <>Send project brief <ArrowUpRight className="h-5 w-5" /></>}
                             </button>
                         </form>}
@@ -498,20 +809,78 @@ function Footer() {
             </div>
         </footer>;
 }
+const ORGANIZATION_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': 'https://kabirtechsolutions.com/#organization',
+  name: 'KabirTech Solutions',
+  url: 'https://kabirtechsolutions.com/',
+  logo: LOGO,
+  image: BANNER,
+  description: 'KabirTech Solutions is a software house building custom software, AI systems, mobile apps and cloud platforms for companies in finance, healthcare and logistics.',
+  email: 'info@kabirtechsolutions.com',
+  telephone: '+9 (232) 148-29814',
+  foundingDate: '2014',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '1200 Congress Ave, Suite 460',
+    addressLocality: 'Austin',
+    addressRegion: 'TX',
+    addressCountry: 'US'
+  },
+  areaServed: 'Worldwide',
+  makesOffer: SERVICES.map(s => ({
+    '@type': 'Offer',
+    itemOffered: {
+      '@type': 'Service',
+      name: s.title,
+      description: s.copy
+    }
+  }))
+};
+const WEBSITE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://kabirtechsolutions.com/#website',
+  name: 'KabirTech Solutions',
+  url: 'https://kabirtechsolutions.com/',
+  publisher: { '@id': 'https://kabirtechsolutions.com/#organization' }
+};
+const PRODUCT_SCHEMAS = PRODUCTS.map(p => ({
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: p.name,
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  description: p.copy,
+  publisher: { '@id': 'https://kabirtechsolutions.com/#organization' },
+  featureList: p.features.map(f => f.title)
+}));
 export default function HomePage() {
   return <div className="bg-background">
+            {/* This block is a static source-text target for tools/generate-llms.js at
+                build time, not a functioning head manager — <Seo> below does the real work. */}
             <Helmet>
                 <title>KabirTech Solutions | Custom Software &amp; AI Development Company</title>
                 <meta name="description" content="KabirTech Solutions is a software house building custom software, AI systems, mobile apps and cloud platforms for companies in finance, healthcare and logistics." />
             </Helmet>
-            <Seo title="KabirTech Solutions | Custom Software & AI Development Company" description="Custom software engineering and applied AI, delivered by senior engineers in two-week sprints." image={BANNER} siteName="KabirTech Solutions" />
+            <Seo
+                title="KabirTech Solutions | Custom Software & AI Development Company"
+                description="Custom software engineering and applied AI, delivered by senior engineers in two-week sprints."
+                keywords="custom software development, AI development company, machine learning consulting, mobile app development, cloud DevOps services, dedicated engineering teams, Postora, AIBOS"
+                image={BANNER}
+                siteName="KabirTech Solutions"
+                jsonLd={[ORGANIZATION_SCHEMA, WEBSITE_SCHEMA, ...PRODUCT_SCHEMAS]}
+            />
 
             <Header />
             <main>
                 <Hero />
                 <Marquee />
                 <Services />
+                <Products />
                 <Work />
+                <Testimonials />
                 <Company />
                 <Contact />
             </main>

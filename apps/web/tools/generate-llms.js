@@ -2,6 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 const CLEAN_CONTENT_REGEX = {
 	comments: /\/\*[\s\S]*?\*\/|\/\/.*$/gm,
@@ -31,10 +32,15 @@ const EXTRACTION_REGEX = {
 };
 
 function cleanContent(content) {
-	return content
-		.replace(CLEAN_CONTENT_REGEX.comments, '')
-		.replace(CLEAN_CONTENT_REGEX.templateLiterals, '""')
-		.replace(CLEAN_CONTENT_REGEX.strings, '""');
+	// Only strips comments, so a `<Helmet>` mentioned in a // or /* */ comment
+	// doesn't false-positive the presence check below. Deliberately does NOT
+	// strip string/template literals: that regex isn't apostrophe-aware, and
+	// real prose full of contractions ("don't", "organization's") makes it
+	// consume from a stray apostrophe to the next quote it finds, corrupting
+	// arbitrary spans of the file — including the <Helmet> tag itself. The
+	// actual title/description extraction already runs on raw content, so
+	// this only needs to guard the boolean test, not sanitize for parsing.
+	return content.replace(CLEAN_CONTENT_REGEX.comments, '');
 }
 
 function cleanText(text) {
@@ -184,7 +190,10 @@ function main() {
 	fs.writeFileSync(outputPath, llmsTxtContent, 'utf8');
 }
 
-const isMainModule = import.meta.url === `file://${process.argv[1]}`;
+// A plain `file://${process.argv[1]}` comparison never matches on Windows —
+// process.argv[1] is a native backslash path, import.meta.url is a forward-slash
+// file:// URL — so this normalizes both through fileURLToPath first.
+const isMainModule = process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1]);
 
 if (isMainModule) {
 	main();
