@@ -208,3 +208,44 @@
 ## 2026-08-26 21:45:09.276Z blur
 - element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":"project_type","placeholder":null,"label":"Project type","value":"Custom software","valueLength":15,"text":"Custom softwareAI / machine learningMobile appCloud & DevOpsDedicated teamNot sure yet"}
 
+## 2026-08-26 21:52:25.089Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":"project_type","placeholder":null,"label":"Project type","value":"Custom software","valueLength":15,"text":"Custom softwareAI / machine learningMobile appCloud & DevOpsDedicated teamNot sure yet"}
+
+## 2026-08-26 21:52:28.373Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":"project_type","placeholder":null,"label":"Project type","value":"Custom software","valueLength":15,"text":"Custom softwareAI / machine learningMobile appCloud & DevOpsDedicated teamNot sure yet"}
+
+## 2026-08-26 21:52:28.498Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"KabirTech"}
+
+## 2026-08-26 21:52:28.498Z navigate
+- url: http://localhost:3000/#top
+- via: popstate
+
+## 2026-08-26 21:52:31.080Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Products"}
+
+## 2026-08-26 21:52:31.080Z navigate
+- url: http://localhost:3000/#products
+- via: popstate
+
+## 2026-08-26 21:52:32.823Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Work"}
+
+## 2026-08-26 21:52:32.824Z navigate
+- url: http://localhost:3000/#work
+- via: popstate
+
+## 2026-08-26 21:52:34.136Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Company"}
+
+## 2026-08-26 21:52:34.136Z navigate
+- url: http://localhost:3000/#company
+- via: popstate
+
+## 2026-08-26 21:52:36.047Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Contact"}
+
+## 2026-08-26 21:52:36.047Z navigate
+- url: http://localhost:3000/#contact
+- via: popstate
+
