@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Activity, ArrowUpRight, BarChart3, Boxes, Brain, BrainCircuit, Building2, Captions, Clock, Cloud, Code2, Command, Cpu, Database, Factory, FileSearch, GitBranch, GraduationCap, Hash, Headset, Image as ImageIcon, Inbox, Languages, Layers, LineChart, Lock, Mail, Megaphone, MapPin, Menu, Mic, BookOpen, Phone, PenLine, PieChart, Plug, Quote, Repeat, Rocket, CalendarDays, Search, ShieldCheck, ShoppingCart, Smartphone, Sparkles, Star, Target, TrendingUp, Users, Video, Wallet, Workflow, X, Check, Loader2, Youtube, Zap } from 'lucide-react';
+import { Activity, ArrowUpRight, BarChart3, Brain, BrainCircuit, Building2, Captions, Clock, Cloud, Code2, Command, Cpu, Database, Factory, FileSearch, GitBranch, GraduationCap, Hash, Headset, Image as ImageIcon, Inbox, Languages, Layers, LineChart, Lock, Mail, Megaphone, MapPin, Menu, Mic, BookOpen, Phone, PenLine, PieChart, Plug, Quote, Repeat, Rocket, CalendarDays, Search, Send, ShieldCheck, ShoppingCart, Smartphone, Sparkles, Star, Target, TrendingUp, Users, Video, Wallet, Workflow, X, Check, Loader2, Youtube, Zap } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import CountUp from '@/components/CountUp';
 import Seo from '@/components/Seo';
@@ -344,6 +344,104 @@ function Header() {
                 </div>}
         </header>;
 }
+const AI_PROMPTS = [{
+  q: "Prepare this month's business report",
+  a: 'Revenue is $245,300, up 17% from last month. Profit is up 25%. Three enterprise customers represent 38% of revenue — worth diversifying.',
+  metrics: [['$245.3k', 'Revenue', '+17%'], ['$91.2k', 'Expenses', '-4%'], ['$154.1k', 'Profit', '+25%']]
+}, {
+  q: 'Find unpaid invoices',
+  a: '3 invoices are overdue, totaling $31,500. Northgate Supplies is 42 days past due — want me to draft a reminder?'
+}, {
+  q: 'Show sales performance',
+  a: 'Revenue is $245,300, up 17% from last month. Product A generated $83,000 and is your top performer this quarter.'
+}, {
+  q: 'Create a social campaign for Product A',
+  a: 'Drafted a 5-post LinkedIn + Instagram campaign — audience, captions and images ready, scheduled across the next two weeks.'
+}];
+function AiCommandDemo() {
+  const [active, setActive] = useState(null);
+  const [stage, setStage] = useState('idle');
+  const [input, setInput] = useState('');
+  const timeoutRef = useRef(null);
+  const runPrompt = entry => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setActive(entry);
+    setStage('thinking');
+    timeoutRef.current = setTimeout(() => setStage('answered'), 900);
+  };
+  const submit = e => {
+    e.preventDefault();
+    if (!input.trim() || stage === 'thinking') return;
+    runPrompt({
+      q: input,
+      a: "Got it — I'd pull that from your connected systems and bring back an answer here. This is a demo; talk to us to see AIBOS running on your real data."
+    });
+    setInput('');
+  };
+  const reset = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setActive(null);
+    setStage('idle');
+  };
+  return <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur sm:p-6">
+            <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                    <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-amber-400/70" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/70" />
+                    <span className="ml-2 text-xs font-medium text-slate-400">AIBOS · AI Command Center</span>
+                </div>
+                <span className="rounded-full border border-sky-400/30 bg-sky-400/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-sky-300">Live demo</span>
+            </div>
+
+            <div className="mt-5 flex-1">
+                {!active ? <>
+                        <p className="font-display text-lg font-semibold text-white">Good morning. What would you like me to do?</p>
+                        <div className="mt-4 flex flex-wrap gap-2">
+                            {AI_PROMPTS.map(p => <button key={p.q} type="button" onClick={() => runPrompt(p)} className="rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-left text-xs font-medium text-slate-200 transition-colors hover:border-sky-400/40 hover:bg-sky-400/10 hover:text-white">
+                                    {p.q}
+                                </button>)}
+                        </div>
+                    </> : <div>
+                        <div className="flex justify-end">
+                            <p className="max-w-[85%] rounded-2xl rounded-tr-sm bg-sky-500 px-4 py-2.5 text-sm text-white">{active.q}</p>
+                        </div>
+
+                        <div className="mt-3 flex items-start gap-2.5">
+                            <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-400/15 text-sky-400">
+                                <Sparkles className="h-3.5 w-3.5" strokeWidth={1.75} />
+                            </div>
+                            {stage === 'thinking' ? <div className="flex items-center gap-1.5 rounded-2xl rounded-tl-sm bg-white/10 px-4 py-3">
+                                    <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-400 [animation-delay:-0.3s]" />
+                                    <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-400 [animation-delay:-0.15s]" />
+                                    <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-slate-400" />
+                                </div> : <div className="max-w-[85%] rounded-2xl rounded-tl-sm bg-white/10 px-4 py-2.5 text-sm leading-relaxed text-slate-200">
+                                    {active.a}
+                                </div>}
+                        </div>
+
+                        {stage === 'answered' && active.metrics && <div className="mt-4 grid grid-cols-3 gap-2.5">
+                                {active.metrics.map(([v, l, d]) => <div key={l} className="rounded-xl border border-white/10 bg-white/5 p-3">
+                                        <p className="font-display text-base font-bold text-white">{v}</p>
+                                        <p className="mt-0.5 text-[11px] text-slate-400">{l}</p>
+                                        <p className="mt-0.5 text-[11px] font-medium text-emerald-400">{d}</p>
+                                    </div>)}
+                            </div>}
+
+                        {stage === 'answered' && <button type="button" onClick={reset} className="mt-4 text-xs font-medium text-sky-400 hover:text-sky-300">
+                                ← Ask something else
+                            </button>}
+                    </div>}
+            </div>
+
+            <form onSubmit={submit} className="mt-5 flex items-center gap-2 border-t border-white/10 pt-4">
+                <input value={input} onChange={e => setInput(e.target.value)} placeholder="Ask AIBOS anything about your business..." className="min-w-0 flex-1 bg-transparent text-sm text-white placeholder:text-slate-500 outline-none" />
+                <button type="submit" aria-label="Send" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sky-500 text-white transition-colors hover:bg-sky-400">
+                    <Send className="h-4 w-4" />
+                </button>
+            </form>
+        </div>;
+}
 function Hero() {
   return <section id="top" className="relative flex min-h-[100dvh] items-center overflow-hidden bg-[hsl(var(--ink))] pt-[72px]">
             <div className="absolute inset-0 circuit-grid opacity-70" aria-hidden="true" />
@@ -439,23 +537,8 @@ function Hero() {
         duration: 0.7,
         delay: 0.2,
         ease: 'easeOut'
-      }} className="relative">
-                    <img src={BANNER} alt="KabirTech Solutions — Innovating Technology. Empowering Growth." className="w-full rounded-2xl border border-white/10 shadow-2xl shadow-blue-950/60" />
-                    <div className="mt-5 grid grid-cols-2 gap-4">
-                        {[{
-            icon: BrainCircuit,
-            k: 'AI systems in production',
-            v: 'RAG, forecasting, vision'
-          }, {
-            icon: Boxes,
-            k: 'Delivery model',
-            v: 'Two-week sprints, demo each'
-          }].map(c => <div key={c.k} className="rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-                                <c.icon className="h-5 w-5 text-sky-400" strokeWidth={1.75} />
-                                <p className="mt-3 text-sm font-semibold text-white">{c.k}</p>
-                                <p className="mt-1 text-xs text-slate-400">{c.v}</p>
-                            </div>)}
-                    </div>
+      }} className="relative shadow-2xl shadow-blue-950/60">
+                    <AiCommandDemo />
                 </motion.div>
             </div>
         </section>;
@@ -504,6 +587,8 @@ function Services() {
         </section>;
 }
 function Products() {
+  const [active, setActive] = useState(0);
+  const p = PRODUCTS[active];
   return <section id="products" className="relative overflow-hidden bg-[hsl(var(--ink))] py-24 lg:py-32">
             <div className="absolute inset-0 circuit-grid opacity-40" aria-hidden="true" />
             <div className="absolute -right-32 top-1/4 h-[440px] w-[440px] rounded-full bg-sky-500/15 blur-[140px]" aria-hidden="true" />
@@ -520,41 +605,47 @@ function Products() {
                     </p>
                 </Reveal>
 
-                {PRODUCTS.map(p => <div key={p.name} className="mt-14">
-                        <Reveal>
-                            <div className="flex flex-col gap-6 rounded-2xl border border-white/10 bg-white/[0.04] p-7 sm:flex-row sm:items-center sm:justify-between sm:p-9">
-                                <div className="flex items-center gap-4">
-                                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-sky-500/15 text-sky-400">
-                                        <Sparkles className="h-7 w-7" strokeWidth={1.5} />
-                                    </div>
-                                    <div>
-                                        <div className="flex items-center gap-3">
-                                            <h3 className="font-display text-2xl font-bold text-white">{p.name}</h3>
-                                            <span className="rounded-full border border-sky-400/30 bg-sky-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.14em] text-sky-300">{p.tag}</span>
-                                        </div>
-                                        <p className="mt-1 text-sm text-slate-400">{p.tagline}</p>
-                                    </div>
+                <div className="mt-10 flex flex-wrap gap-3" role="tablist" aria-label="Our products">
+                    {PRODUCTS.map((prod, i) => <button key={prod.name} type="button" role="tab" aria-selected={i === active} onClick={() => setActive(i)} className={`rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${i === active ? 'border-sky-400/40 bg-sky-400/15 text-white' : 'border-white/15 bg-white/[0.03] text-slate-400 hover:border-white/30 hover:text-white'}`}>
+                            {prod.name}
+                        </button>)}
+                </div>
+
+                <div key={p.name} className="mt-8">
+                    <Reveal>
+                        <div className="flex flex-col gap-6 rounded-2xl border border-white/10 bg-white/[0.04] p-7 sm:flex-row sm:items-center sm:justify-between sm:p-9">
+                            <div className="flex items-center gap-4">
+                                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-sky-500/15 text-sky-400">
+                                    <Sparkles className="h-7 w-7" strokeWidth={1.5} />
                                 </div>
-                                <a href="#contact" className="inline-flex min-h-[48px] shrink-0 items-center justify-center gap-2 rounded-full border border-white/20 px-6 text-sm font-semibold text-white transition-colors hover:bg-white/10">
-                                    Talk to us about {p.name} <ArrowUpRight className="h-4 w-4" />
-                                </a>
-                            </div>
-                        </Reveal>
-
-                        <p className="relative mt-8 max-w-2xl text-base leading-relaxed text-slate-300">{p.copy}</p>
-
-                        <div className="relative mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                            {p.features.map((f, i) => <Reveal key={f.title} delay={i * 0.03}>
-                                    <div className="group h-full rounded-xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:border-sky-400/30 hover:bg-white/[0.05]">
-                                        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-sky-400/10 text-sky-400">
-                                            <f.icon className="h-[18px] w-[18px]" strokeWidth={1.75} />
-                                        </div>
-                                        <h4 className="mt-4 text-sm font-semibold text-white">{f.title}</h4>
-                                        <p className="mt-1.5 text-sm leading-relaxed text-slate-400">{f.copy}</p>
+                                <div>
+                                    <div className="flex items-center gap-3">
+                                        <h3 className="font-display text-2xl font-bold text-white">{p.name}</h3>
+                                        <span className="rounded-full border border-sky-400/30 bg-sky-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.14em] text-sky-300">{p.tag}</span>
                                     </div>
-                                </Reveal>)}
+                                    <p className="mt-1 text-sm text-slate-400">{p.tagline}</p>
+                                </div>
+                            </div>
+                            <a href="#contact" className="inline-flex min-h-[48px] shrink-0 items-center justify-center gap-2 rounded-full border border-white/20 px-6 text-sm font-semibold text-white transition-colors hover:bg-white/10">
+                                Talk to us about {p.name} <ArrowUpRight className="h-4 w-4" />
+                            </a>
                         </div>
-                    </div>)}
+                    </Reveal>
+
+                    <p className="relative mt-8 max-w-2xl text-base leading-relaxed text-slate-300">{p.copy}</p>
+
+                    <div className="relative mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        {p.features.map((f, i) => <Reveal key={f.title} delay={i * 0.03}>
+                                <div className="group h-full rounded-xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:border-sky-400/30 hover:bg-white/[0.05]">
+                                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-sky-400/10 text-sky-400">
+                                        <f.icon className="h-[18px] w-[18px]" strokeWidth={1.75} />
+                                    </div>
+                                    <h4 className="mt-4 text-sm font-semibold text-white">{f.title}</h4>
+                                    <p className="mt-1.5 text-sm leading-relaxed text-slate-400">{f.copy}</p>
+                                </div>
+                            </Reveal>)}
+                    </div>
+                </div>
             </div>
         </section>;
 }

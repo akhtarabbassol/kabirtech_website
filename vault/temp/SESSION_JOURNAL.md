@@ -249,3 +249,87 @@
 - url: http://localhost:3000/#contact
 - via: popstate
 
+## 2026-08-26 21:54:38.851Z click
+- element: {"tag":"section","role":null,"ariaLabel":null,"name":null,"type":null,"id":"work","placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Case studiesSystems running in production, with numbers attachedAI PlatformMeridian Capital PartnersDocument intelligence for a 40-analyst investment deskA retrieval pipeline over 1.2M pages of filings with citation-grounded answers, cutting diligence prep from days to hours.74%faster diligence1.2Mdocuments indexedLogisticsNorthbay FreightRoute and yard operations rebuilt around live telemetryReplaced spreadsheet dispatch with a mobile-first operations app and an ETA model trained on four years of trip history.31%fewer late loads9 wksto first releaseHealthcareAurora Clinics GroupA compliant patient data platform across 18 clinicsUnified scheduling, records and billing behind a HIPAA-aligned service layer, with audit trails built in from day one.18clinics migrated0audit findingsAlso shipped recentlyRetailInventory sync across 40 storesReal-time stock, zero oversellingEdTechAdaptive assessment engine for a K-12 platform210k students onboardedReal EstateLead-to-lease pipeline automation3x agent throughputEnergyGrid anomaly detection model99.4% detection accuracyManufacturingPredictive maintenance for plant floor sensors18% less unplanned downtimeSaaSMulti-tenant billing rebuild on StripeMigrated 6k accounts, zero downtime"}
+
+## 2026-08-26 21:58:44.294Z load
+- url: http://localhost:3000/
+
+## 2026-08-26 21:58:44.391Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-26 21:58:51.364Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Prepare this month's business report"}
+
+## 2026-08-26 21:59:01.272Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"← Ask something else"}
+
+## 2026-08-26 21:59:07.413Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ask AIBOS anything about your business...","label":"Ask AIBOS anything about your business...","value":"","valueLength":0,"text":""}
+
+## 2026-08-26 21:59:07.557Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ask AIBOS anything about your business...","label":"Ask AIBOS anything about your business...","value":"","valueLength":0,"text":""}
+
+## 2026-08-26 21:59:13.666Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ask AIBOS anything about your business...","label":"Ask AIBOS anything about your business...","value":"","valueLength":0,"text":""}
+
+## 2026-08-26 21:59:13.762Z load
+- url: http://localhost:3000/
+
+## 2026-08-26 21:59:22.322Z load
+- url: http://localhost:3000/
+
+## 2026-08-26 21:59:26.397Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ask AIBOS anything about your business...","label":"Ask AIBOS anything about your business...","value":"","valueLength":0,"text":""}
+
+## 2026-08-26 21:59:26.525Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ask AIBOS anything about your business...","label":"Ask AIBOS anything about your business...","value":"","valueLength":0,"text":""}
+
+## 2026-08-26 21:59:31.068Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":"Ask AIBOS anything about your business...","label":"Ask AIBOS anything about your business...","value":"Show me my sales","valueLength":16,"text":""}
+
+## 2026-08-26 21:59:31.068Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Send","name":null,"type":"submit","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-26 21:59:31.069Z submit
+- action: http://localhost:3000/
+- fields: [{"label":"Ask AIBOS anything about your business...","type":"text","value":"Show me my sales","length":16,"redacted":false},{"label":"Send","type":"submit","value":"","length":0,"redacted":false}]
+
+## 2026-08-26 21:59:39.265Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Prepare this month's business report"}
+
+## 2026-08-26 21:59:45.739Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"← Ask something else"}
+
+## 2026-08-26 21:59:46.899Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Find unpaid invoices"}
+
+## 2026-08-26 21:59:51.779Z navigate
+- url: http://localhost:3000/#products
+- via: popstate
+
+## 2026-08-26 21:59:52.769Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"← Ask something else"}
+
+## 2026-08-26 21:59:54.049Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Show sales performance"}
+
+## 2026-08-26 21:59:57.272Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"AIBOS"}
+
+## 2026-08-26 22:00:43.991Z load
+- url: http://localhost:3000/
+
+## 2026-08-26 22:01:11.767Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"AIBOS"}
+
+## 2026-08-26 22:01:19.612Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Postora"}
+
+## 2026-08-26 22:01:35.198Z click
+- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Live demo"}
+
+## 2026-08-26 22:01:36.476Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Software house · AI engineeringInnovating technology.Empowering growth.KabirTech Solutions designs, builds and operates custom software and AI systems for companies that need production results — not prototypes. Senior engineers, fixed sprints, code you own outright.Start a project See our work120+Projects delivered11Years building38Engineers on staffAIBOS · AI Command CenterLive demoGood morning. What would you like me to do?Prepare this month's business reportFind unpaid invoicesShow sales performanceCreate a social campaign for Product A"}
+
