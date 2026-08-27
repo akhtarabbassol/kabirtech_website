@@ -1,2 +1,4 @@
 ## Pages
 - [KabirTech Solutions | Custom Software & AI Development Company](/): KabirTech Solutions is a software house building custom software, AI systems, mobile apps and cloud platforms for companies in finance, healthcare and logistics.
+- [Privacy Policy | KabirTech Solutions](/privacy-policy): How KabirTech Solutions collects, uses and protects information submitted through kabirtechsolutions.com.
+- [Terms & Conditions | KabirTech Solutions](/terms-and-conditions): The terms that govern your use of kabirtechsolutions.com.

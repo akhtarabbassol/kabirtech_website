@@ -1,30 +1,15 @@
 import React, { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Activity, ArrowUpRight, BarChart3, Brain, BrainCircuit, Building2, Captions, Clock, Cloud, Code2, Command, Cpu, Database, Factory, FileSearch, GitBranch, GraduationCap, Hash, Headset, Image as ImageIcon, Inbox, Languages, Layers, LineChart, Lock, Mail, Megaphone, MapPin, Menu, Mic, BookOpen, Phone, PenLine, PieChart, Plug, Quote, Repeat, Rocket, CalendarDays, Search, Send, ShieldCheck, ShoppingCart, Smartphone, Sparkles, Star, Target, TrendingUp, Users, Video, Wallet, Workflow, X, Check, Loader2, Youtube, Zap } from 'lucide-react';
+import { Activity, ArrowUpRight, BarChart3, Brain, BrainCircuit, Building2, Captions, Clock, Cloud, Code2, Command, Cpu, Database, Factory, FileSearch, GitBranch, GraduationCap, Hash, Headset, Image as ImageIcon, Inbox, Languages, Layers, LineChart, Lock, Mail, Megaphone, MapPin, Mic, BookOpen, Phone, PenLine, PieChart, Plug, Quote, Repeat, Rocket, CalendarDays, Search, Send, ShieldCheck, ShoppingCart, Smartphone, Sparkles, Star, Target, TrendingUp, Users, Video, Wallet, Workflow, Check, Loader2, Youtube, Zap } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import CountUp from '@/components/CountUp';
 import Seo from '@/components/Seo';
+import Header, { LOGO } from '@/components/Header';
+import Footer from '@/components/Footer';
 import pb from '@/lib/pocketbaseClient';
-const LOGO = 'https://horizons-cdn.hostinger.com/b01990a9-0b3d-4660-9a5b-7fcbea39cb56/3ec973cacc742f86a2b43fe64ae98ee0.jpg';
 const BANNER = 'https://horizons-cdn.hostinger.com/b01990a9-0b3d-4660-9a5b-7fcbea39cb56/dbffa1f63f69611038171b3068a16cbe.jpg';
 const TEAM_PHOTO = 'https://images.hostinger.com/80be64c8-babc-483d-b736-0c54e039c96b.png';
-const NAV = [{
-  label: 'Services',
-  href: '#services'
-}, {
-  label: 'Products',
-  href: '#products'
-}, {
-  label: 'Work',
-  href: '#work'
-}, {
-  label: 'Company',
-  href: '#company'
-}, {
-  label: 'Contact',
-  href: '#contact'
-}];
 const SERVICES = [{
   icon: Code2,
   title: 'Custom Software Engineering',
@@ -305,45 +290,6 @@ const TEAM = [{
   role: 'Director of Product Design'
 }];
 const STACK = ['React', 'TypeScript', 'Node.js', 'Python', 'PyTorch', 'LangChain', 'PostgreSQL', 'Kubernetes', 'Terraform', 'AWS', 'Azure', 'Flutter', 'Go', 'Snowflake'];
-function Header() {
-  const [open, setOpen] = useState(false);
-  return <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[hsl(var(--ink))]/85 backdrop-blur-xl">
-            <div className="mx-auto flex h-[72px] max-w-[90rem] items-center justify-between px-5 sm:px-8">
-                <a href="#top" className="flex items-center gap-3">
-                    <img src={LOGO} alt="KabirTech Solutions logo" className="h-11 w-11 rounded-xl object-cover object-left" />
-                    <span className="font-display text-lg font-bold tracking-tight text-white">
-                        Kabir<span className="text-sky-400">Tech</span>
-                    </span>
-                </a>
-
-                <nav className="hidden items-center gap-9 md:flex">
-                    {NAV.map(n => <a key={n.href} href={n.href} className="text-sm font-medium text-slate-300 transition-colors hover:text-white">
-                            {n.label}
-                        </a>)}
-                </nav>
-
-                <div className="hidden items-center gap-4 md:flex">
-                    <a href="tel:+15551240188" className="text-sm font-medium text-slate-300 transition-colors hover:text-white">+9 (232) 148-29814</a>
-                    <a href="#contact" className="rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-sky-400 active:scale-[0.98]">
-                        Book a call
-                    </a>
-                </div>
-
-                <button type="button" onClick={() => setOpen(v => !v)} aria-label="Toggle menu" className="flex h-11 w-11 items-center justify-center rounded-lg text-white md:hidden">
-                    {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                </button>
-            </div>
-
-            {open && <div className="border-t border-white/10 bg-[hsl(var(--ink))] px-5 py-4 md:hidden">
-                    {NAV.map(n => <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="block py-3 text-base font-medium text-slate-200">
-                            {n.label}
-                        </a>)}
-                    <a href="#contact" onClick={() => setOpen(false)} className="mt-2 block rounded-full bg-sky-500 py-3 text-center text-base font-semibold text-white">
-                        Book a call
-                    </a>
-                </div>}
-        </header>;
-}
 const AI_PROMPTS = [{
   q: "Prepare this month's business report",
   a: 'Revenue is $245,300, up 17% from last month. Profit is up 25%. Three enterprise customers represent 38% of revenue — worth diversifying.',
@@ -878,27 +824,13 @@ function Contact() {
                             <button type="submit" disabled={status === 'loading'} className="inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-full bg-sky-500 px-8 text-base font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:bg-sky-400 hover:shadow-sky-400/40 active:scale-[0.98] disabled:opacity-60">
                                 {status === 'loading' ? <><Loader2 className="h-5 w-5 animate-spin" /> Sending</> : <>Send project brief <ArrowUpRight className="h-5 w-5" /></>}
                             </button>
+                            <p className="text-center text-xs text-slate-500">
+                                By submitting, you agree to our <a href="/terms-and-conditions" className="underline hover:text-slate-300">Terms &amp; Conditions</a> and <a href="/privacy-policy" className="underline hover:text-slate-300">Privacy Policy</a>.
+                            </p>
                         </form>}
                 </div>
             </div>
         </section>;
-}
-function Footer() {
-  return <footer className="border-t border-white/10 bg-[hsl(var(--ink))] py-12">
-            <div className="mx-auto flex max-w-[80rem] flex-col gap-8 px-5 sm:px-8 md:flex-row md:items-center md:justify-between">
-                <div className="flex items-center gap-3">
-                    <img src={LOGO} alt="KabirTech Solutions" className="h-10 w-10 rounded-lg object-cover object-left" />
-                    <div>
-                        <p className="font-display font-bold text-white">Kabir<span className="text-sky-400">Tech</span> Solutions</p>
-                        <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Innovating technology</p>
-                    </div>
-                </div>
-                <nav className="flex flex-wrap gap-x-8 gap-y-3">
-                    {NAV.map(n => <a key={n.href} href={n.href} className="text-sm text-slate-400 transition-colors hover:text-white">{n.label}</a>)}
-                </nav>
-                <p className="text-sm text-slate-500">© {new Date().getFullYear()} KabirTech Solutions</p>
-            </div>
-        </footer>;
 }
 const ORGANIZATION_SCHEMA = {
   '@context': 'https://schema.org',
