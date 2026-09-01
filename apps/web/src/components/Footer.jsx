@@ -8,7 +8,7 @@ function Footer() {
                     <img src={LOGO} alt="KabirTech Solutions" className="h-10 w-10 rounded-lg object-cover object-left" />
                     <div>
                         <p className="font-display font-bold text-white">Kabir<span className="text-sky-400">Tech</span> Solutions</p>
-                        <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Innovating technology</p>
+                        <p className="text-xs uppercase tracking-[0.2em] text-slate-500">AI engineering studio</p>
                     </div>
                 </div>
                 <nav className="flex flex-wrap gap-x-8 gap-y-3">

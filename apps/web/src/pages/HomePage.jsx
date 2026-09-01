@@ -11,38 +11,40 @@ import pb from '@/lib/pocketbaseClient';
 const BANNER = 'https://horizons-cdn.hostinger.com/b01990a9-0b3d-4660-9a5b-7fcbea39cb56/dbffa1f63f69611038171b3068a16cbe.jpg';
 const TEAM_PHOTO = 'https://images.hostinger.com/80be64c8-babc-483d-b736-0c54e039c96b.png';
 const SERVICES = [{
+  icon: BrainCircuit,
+  featured: true,
+  title: 'AI & Machine Learning',
+  copy: 'From retrieval-augmented assistants to forecasting models and document intelligence — shipped with evaluation harnesses and human-in-the-loop approval, not demos.',
+  points: ['LLM assistants & RAG', 'Predictive & vision models', 'MLOps and monitoring']
+}, {
   icon: Code2,
   title: 'Custom Software Engineering',
-  copy: 'Web platforms, internal tools and APIs built to your business logic — architected for the load you will have in three years, not the one you have today.',
-  points: ['React / Node / Python', 'Domain-driven architecture', 'Legacy system modernisation']
-}, {
-  icon: BrainCircuit,
-  title: 'AI & Machine Learning',
-  copy: 'From retrieval-augmented assistants to forecasting models and document intelligence — shipped with evaluation harnesses, not demos.',
-  points: ['LLM assistants & RAG', 'Predictive & vision models', 'MLOps and monitoring']
+  copy: 'Web platforms, internal tools and APIs built to your business logic, with AI features designed in from day one — not bolted on after launch.',
+  points: ['React / Node / Python', 'AI-assisted development', 'Legacy system modernisation']
 }, {
   icon: Smartphone,
   title: 'Mobile Applications',
-  copy: 'Native-feeling iOS and Android products with an offline-first data layer and release pipelines your team can actually operate.',
-  points: ['React Native & Flutter', 'Offline sync', 'App store delivery']
+  copy: 'Native-feeling iOS and Android products with on-device intelligence, an offline-first data layer, and release pipelines your team can actually operate.',
+  points: ['React Native & Flutter', 'On-device AI & offline sync', 'App store delivery']
 }, {
   icon: Cloud,
   title: 'Cloud & DevOps',
-  copy: 'Infrastructure as code, CI/CD and observability so releases stop being events. We hand over runbooks, not mysteries.',
-  points: ['AWS / Azure / GCP', 'Kubernetes & Terraform', 'Cost optimisation']
+  copy: 'Infrastructure as code, CI/CD and AI-driven anomaly detection so releases stop being events. We hand over runbooks, not mysteries.',
+  points: ['AWS / Azure / GCP', 'Kubernetes & Terraform', 'Predictive observability']
 }, {
   icon: Layers,
   title: 'Product Design',
-  copy: 'Discovery workshops, prototypes and design systems that turn a rough idea into a scope your stakeholders can sign off on.',
-  points: ['Discovery sprints', 'Design systems', 'Usability testing']
+  copy: 'Discovery workshops and AI-accelerated prototyping that turn a rough idea into a costed scope your stakeholders can sign off on in days, not weeks.',
+  points: ['Discovery sprints', 'Rapid AI prototyping', 'Usability testing']
 }, {
   icon: ShieldCheck,
   title: 'Dedicated Teams',
-  copy: 'Senior engineers embedded in your process, in your timezone overlap, reporting into your leads — scaled up or down quarterly.',
+  copy: 'Senior engineers fluent in modern AI tooling, embedded in your process and timezone overlap, reporting into your leads — scaled up or down quarterly.',
   points: ['Vetted senior talent', 'Your tooling & rituals', 'Flexible contracts']
 }];
 const PRODUCTS = [{
   name: 'Postora',
+  url: 'https://postora.kabirtechsolutions.com/',
   tag: 'Social media AI platform',
   tagline: 'Open any tool — content, images, strategy, analytics, competitors, and more.',
   copy: 'We built Postora to run our own social presence, then opened it up. Every AI feature below is in production, used daily, not a roadmap slide.',
@@ -121,6 +123,7 @@ const PRODUCTS = [{
   }]
 }, {
   name: 'AIBOS',
+  url: null,
   tag: 'AI business operating system',
   tagline: 'Your AI-powered operating system for running a business.',
   copy: "Instead of switching between your CRM, accounting software and marketing tools, you tell AIBOS what you need — \"prepare this month's business report\" — and it plans the work, pulls the data from every department, and executes it, with approval gates on anything that matters.",
@@ -147,7 +150,7 @@ const PRODUCTS = [{
   }, {
     icon: Headset,
     title: 'Support Agent',
-    copy: 'Reads a customer request, finds the account and order data, and resolves or routes it automatically.'
+    copy: 'Tracks every ticket across WhatsApp, email, call and chat, triages by urgency and customer value, and links resolutions back to the CRM record — then flags anything sitting open too long before it becomes a churn problem.'
   }, {
     icon: BookOpen,
     title: 'AI Knowledge Base',
@@ -303,6 +306,9 @@ const AI_PROMPTS = [{
 }, {
   q: 'Create a social campaign for Product A',
   a: 'Drafted a 5-post LinkedIn + Instagram campaign — audience, captions and images ready, scheduled across the next two weeks.'
+}, {
+  q: 'Summarize customer support',
+  a: "1,243 tickets this month, up 8%. 3 have been open past 48 hours, mostly billing questions — including one flagged VIP customer who hasn't heard back. Want me to draft replies for review?"
 }];
 function AiCommandDemo() {
   const [active, setActive] = useState(null);
@@ -406,7 +412,7 @@ function Hero() {
           duration: 0.5,
           ease: 'easeOut'
         }} className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-sky-300">
-                        <Cpu className="h-3.5 w-3.5" /> Software house · AI engineering
+                        <Cpu className="h-3.5 w-3.5" /> AI engineering studio
                     </motion.div>
 
                     <motion.h1 initial={{
@@ -420,9 +426,9 @@ function Hero() {
           delay: 0.08,
           ease: 'easeOut'
         }} className="mt-7 font-display text-[2.7rem] font-bold leading-[1.03] tracking-tight text-white sm:text-6xl lg:text-[4.4rem]">
-                        Innovating technology.
-                        <span className="relative ml-2 inline-block text-sky-400">
-                            Empowering growth.
+                        AI-native software,
+                        <span className="relative ml-2 inline-block bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent">
+                            engineered to ship.
                             <svg className="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 300 10" fill="none" preserveAspectRatio="none" aria-hidden="true">
                                 <path d="M2 7C60 2 120 2 180 5C220 7 265 6 298 3" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" className="text-sky-500" />
                             </svg>
@@ -440,8 +446,9 @@ function Hero() {
           delay: 0.16,
           ease: 'easeOut'
         }} className="mt-8 max-w-xl text-lg leading-relaxed text-slate-300">
-                        KabirTech Solutions designs, builds and operates custom software and AI systems for companies that
-                        need production results — not prototypes. Senior engineers, fixed sprints, code you own outright.
+                        KabirTech Solutions is an AI engineering studio — we design, build and operate production AI systems
+                        and the software around them, for companies that need results, not demos. Senior engineers, fixed
+                        sprints, code you own outright.
                     </motion.p>
 
                     <motion.div initial={{
@@ -505,23 +512,24 @@ function Services() {
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">What we do</p>
                 <div className="mt-4 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
                     <h2 className="max-w-2xl font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-                        Engineering capability across the whole product lifecycle
+                        AI-native engineering across the whole product lifecycle
                     </h2>
                     <p className="max-w-sm text-base leading-relaxed text-muted-foreground">
-                        One accountable team from discovery through to the on-call rotation, so nothing falls between vendors.
+                        One accountable team — from model evaluation to the on-call rotation — so nothing falls between vendors.
                     </p>
                 </div>
             </Reveal>
 
             <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                {SERVICES.map((s, i) => <Reveal key={s.title} delay={i * 0.05}>
-                        <div className="group relative h-full overflow-hidden rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/10">
+                {SERVICES.map((s, i) => <Reveal key={s.title} delay={i * 0.05} className={s.featured ? 'sm:col-span-2' : ''}>
+                        <div className={`group relative h-full overflow-hidden rounded-2xl border p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 ${s.featured ? 'border-primary/30 bg-gradient-to-br from-primary/[0.06] via-card to-violet-500/[0.06] hover:border-primary/50' : 'border-border bg-card hover:border-primary/40'}`}>
                             <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/0 blur-2xl transition-colors duration-300 group-hover:bg-primary/10" aria-hidden="true" />
-                            <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
-                                <s.icon className="h-6 w-6" strokeWidth={1.5} />
+                            {s.featured && <span className="absolute right-7 top-7 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-primary">Core capability</span>}
+                            <div className={`relative flex items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-primary-foreground ${s.featured ? 'h-14 w-14' : 'h-12 w-12'}`}>
+                                <s.icon className={s.featured ? 'h-7 w-7' : 'h-6 w-6'} strokeWidth={1.5} />
                             </div>
-                            <h3 className="relative mt-6 font-display text-xl font-semibold tracking-tight">{s.title}</h3>
-                            <p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
+                            <h3 className={`relative mt-6 font-display font-semibold tracking-tight ${s.featured ? 'text-2xl' : 'text-xl'}`}>{s.title}</h3>
+                            <p className="relative mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
                             <ul className="relative mt-6 space-y-2 border-t border-border pt-5">
                                 {s.points.map(p => <li key={p} className="flex items-center gap-2 text-sm text-foreground/80">
                                         <Check className="h-4 w-4 shrink-0 text-primary" /> {p}
@@ -572,9 +580,11 @@ function Products() {
                                     <p className="mt-1 text-sm text-slate-400">{p.tagline}</p>
                                 </div>
                             </div>
-                            <a href="#contact" className="inline-flex min-h-[48px] shrink-0 items-center justify-center gap-2 rounded-full border border-white/20 px-6 text-sm font-semibold text-white transition-colors hover:bg-white/10">
-                                Talk to us about {p.name} <ArrowUpRight className="h-4 w-4" />
-                            </a>
+                            {p.url ? <a href={p.url} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[48px] shrink-0 items-center justify-center gap-2 rounded-full bg-sky-500 px-6 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:bg-sky-400 hover:shadow-sky-400/40 active:scale-[0.98]">
+                                    Visit {p.name} <ArrowUpRight className="h-4 w-4" />
+                                </a> : <a href="#contact" className="inline-flex min-h-[48px] shrink-0 items-center justify-center gap-2 rounded-full border border-white/20 px-6 text-sm font-semibold text-white transition-colors hover:bg-white/10">
+                                    Talk to us about {p.name} <ArrowUpRight className="h-4 w-4" />
+                                </a>}
                         </div>
                     </Reveal>
 
@@ -689,16 +699,18 @@ function Company() {
                 <Reveal delay={0.08}>
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">The company</p>
                     <h2 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-                        A software house built around senior people
+                        An AI engineering studio built around senior people
                     </h2>
                     <p className="mt-6 text-base leading-relaxed text-muted-foreground">
                         KabirTech Solutions started in 2014 with three engineers and one belief: clients deserve the people who
-                        scoped the project to be the ones who write it. Today we are thirty-eight engineers, designers and data
-                        scientists working with scale-ups and established operators across finance, healthcare and logistics.
+                        scoped the project to be the ones who write it. Today we are thirty-eight engineers, applied AI
+                        specialists and data scientists working with scale-ups and established operators across finance,
+                        healthcare and logistics.
                     </p>
                     <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                        We publish our estimates, our architecture decisions and our test coverage. Every engagement ends with
-                        your team able to run the system without us — that is the standard we hold.
+                        We publish our estimates, our architecture decisions, our model evaluation results and our test
+                        coverage. Every engagement ends with your team able to run the system without us — that is the
+                        standard we hold.
                     </p>
 
                     <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -840,7 +852,7 @@ const ORGANIZATION_SCHEMA = {
   url: 'https://kabirtechsolutions.com/',
   logo: LOGO,
   image: BANNER,
-  description: 'KabirTech Solutions is a software house building custom software, AI systems, mobile apps and cloud platforms for companies in finance, healthcare and logistics.',
+  description: 'KabirTech Solutions is an AI engineering studio building AI systems, custom software, mobile apps and cloud platforms for companies in finance, healthcare and logistics.',
   email: 'info@kabirtechsolutions.com',
   telephone: '+9 (232) 148-29814',
   foundingDate: '2014',
@@ -873,6 +885,7 @@ const PRODUCT_SCHEMAS = PRODUCTS.map(p => ({
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
   name: p.name,
+  ...(p.url ? { url: p.url } : {}),
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
   description: p.copy,
@@ -884,13 +897,13 @@ export default function HomePage() {
             {/* This block is a static source-text target for tools/generate-llms.js at
                 build time, not a functioning head manager — <Seo> below does the real work. */}
             <Helmet>
-                <title>KabirTech Solutions | Custom Software &amp; AI Development Company</title>
-                <meta name="description" content="KabirTech Solutions is a software house building custom software, AI systems, mobile apps and cloud platforms for companies in finance, healthcare and logistics." />
+                <title>KabirTech Solutions | AI Engineering Studio &amp; Custom Software</title>
+                <meta name="description" content="KabirTech Solutions is an AI engineering studio building AI systems, custom software, mobile apps and cloud platforms for companies in finance, healthcare and logistics." />
             </Helmet>
             <Seo
-                title="KabirTech Solutions | Custom Software & AI Development Company"
-                description="Custom software engineering and applied AI, delivered by senior engineers in two-week sprints."
-                keywords="custom software development, AI development company, machine learning consulting, mobile app development, cloud DevOps services, dedicated engineering teams, Postora, AIBOS"
+                title="KabirTech Solutions | AI Engineering Studio & Custom Software"
+                description="AI-native software, engineered to ship — applied AI and custom engineering delivered by senior engineers in two-week sprints."
+                keywords="AI engineering studio, AI development company, machine learning consulting, custom software development, mobile app development, cloud DevOps services, dedicated engineering teams, Postora, AIBOS"
                 image={BANNER}
                 siteName="KabirTech Solutions"
                 jsonLd={[ORGANIZATION_SCHEMA, WEBSITE_SCHEMA, ...PRODUCT_SCHEMAS]}

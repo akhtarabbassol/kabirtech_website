@@ -374,3 +374,112 @@
 ## 2026-08-27 10:36:34.836Z load
 - url: http://localhost:3000/
 
+## 2026-08-29 13:10:09.784Z load
+- url: http://localhost:3000/
+
+## 2026-08-29 13:10:09.894Z load
+- url: http://localhost:3000/
+
+## 2026-08-29 13:10:10.032Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-29 13:10:13.372Z load
+- url: http://localhost:3000/
+
+## 2026-08-29 13:10:27.227Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"AIBOS"}
+
+## 2026-08-29 13:10:50.915Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Postora"}
+
+## 2026-08-29 13:10:56.640Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Visit Postora "}
+
+## 2026-08-29 13:11:15.231Z load
+- url: http://localhost:3000/
+
+## 2026-08-29 13:27:47.366Z load
+- url: http://localhost:3000/
+
+## 2026-08-29 13:27:58.268Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Summarize customer support"}
+
+## 2026-08-29 13:28:14.011Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"AIBOS"}
+
+## 2026-08-31 09:49:25.067Z load
+- url: http://localhost:3000/
+
+## 2026-08-31 09:49:25.229Z load
+- url: http://localhost:3000/
+
+## 2026-08-31 09:49:25.438Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-31 09:49:30.105Z load
+- url: http://localhost:3000/
+
+## 2026-08-31 09:49:35.636Z load
+- url: http://localhost:3000/
+
+## 2026-08-31 09:50:40.186Z load
+- url: http://localhost:3000/
+
+## 2026-08-31 09:50:40.275Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-31 09:53:09.484Z load
+- url: http://localhost:3000/
+
+## 2026-08-31 09:53:09.669Z load
+- url: http://localhost:3000/
+
+## 2026-08-31 09:53:09.839Z load
+- url: http://localhost:3000/
+
+## 2026-08-31 09:53:10.008Z load
+- url: http://localhost:3000/
+
+## 2026-08-31 09:53:10.177Z load
+- url: http://localhost:3000/
+
+## 2026-08-31 09:53:37.401Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Contact"}
+
+## 2026-08-31 09:53:37.402Z navigate
+- url: http://localhost:3000/#contact
+- via: popstate
+
+## 2026-08-31 09:53:38.480Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Company"}
+
+## 2026-08-31 09:53:38.481Z navigate
+- url: http://localhost:3000/#company
+- via: popstate
+
+## 2026-08-31 09:53:39.953Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"KabirTechServicesProductsWorkCompanyContact+9 (232) 148-29814Book a call"}
+
+## 2026-08-31 09:53:50.907Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Privacy Policy"}
+
+## 2026-08-31 09:53:50.986Z load
+- url: http://localhost:3000/privacy-policy
+
+## 2026-08-31 09:53:51.012Z navigate
+- url: http://localhost:3000/privacy-policy
+- via: replaceState
+
+## 2026-08-31 09:53:55.657Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Terms & Conditions"}
+
+## 2026-08-31 09:53:55.742Z load
+- url: http://localhost:3000/terms-and-conditions
+
+## 2026-08-31 09:53:55.769Z navigate
+- url: http://localhost:3000/terms-and-conditions
+- via: replaceState
+
