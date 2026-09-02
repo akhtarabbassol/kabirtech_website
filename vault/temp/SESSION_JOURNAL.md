@@ -675,3 +675,90 @@
 ## 2026-09-02 16:38:58.939Z load
 - url: http://localhost:3000/
 
+## 2026-09-02 17:00:35.070Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 17:03:48.855Z click
+- element: {"tag":"button","role":null,"ariaLabel":"Toggle menu","name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-09-02 17:04:18.413Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 17:04:55.886Z load
+- url: http://localhost:3001/
+
+## 2026-09-02 17:04:56.000Z navigate
+- url: http://localhost:3001/
+- via: replaceState
+
+## 2026-09-02 17:06:14.280Z load
+- url: http://localhost:3001/
+
+## 2026-09-02 17:06:14.467Z load
+- url: http://localhost:3001/
+
+## 2026-09-02 17:06:14.634Z load
+- url: http://localhost:3001/
+
+## 2026-09-02 17:06:14.870Z load
+- url: http://localhost:3001/
+
+## 2026-09-02 17:06:14.981Z load
+- url: http://localhost:3001/
+
+## 2026-09-02 17:06:15.160Z load
+- url: http://localhost:3001/
+
+## 2026-09-02 17:06:15.364Z load
+- url: http://localhost:3001/
+
+## 2026-09-02 17:06:15.490Z load
+- url: http://localhost:3001/
+
+## 2026-09-02 17:06:15.712Z load
+- url: http://localhost:3001/
+
+## 2026-09-02 17:06:15.883Z load
+- url: http://localhost:3001/
+
+## 2026-09-02 17:06:16.084Z load
+- url: http://localhost:3001/
+
+## 2026-09-02 17:06:18.292Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Services"}
+
+## 2026-09-02 17:06:18.293Z navigate
+- url: http://localhost:3001/#services
+- via: popstate
+
+## 2026-09-02 17:06:19.012Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Products"}
+
+## 2026-09-02 17:06:19.012Z navigate
+- url: http://localhost:3001/#products
+- via: popstate
+
+## 2026-09-02 17:06:19.835Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Work"}
+
+## 2026-09-02 17:06:19.835Z navigate
+- url: http://localhost:3001/#work
+- via: popstate
+
+## 2026-09-02 17:06:20.731Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Contact"}
+
+## 2026-09-02 17:06:20.731Z navigate
+- url: http://localhost:3001/#contact
+- via: popstate
+
+## 2026-09-02 17:06:21.762Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"KabirTech"}
+
+## 2026-09-02 17:06:21.841Z load
+- url: http://localhost:3001/
+
+## 2026-09-02 17:06:21.889Z navigate
+- url: http://localhost:3001/
+- via: replaceState
+
