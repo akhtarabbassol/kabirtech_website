@@ -78,6 +78,10 @@ h1, h2, h3, h4, .font-display {
   animation: kt-marquee 34s linear infinite;
 }
 
+.kt-marquee-track:hover {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .kt-marquee-track { animation: none; }
 }

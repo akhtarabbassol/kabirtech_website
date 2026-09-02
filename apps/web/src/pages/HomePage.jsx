@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Activity, ArrowUpRight, BarChart3, Brain, BrainCircuit, Building2, Captions, Clock, Cloud, Code2, Command, Cpu, Database, Factory, FileSearch, GitBranch, GraduationCap, Hash, Headset, Image as ImageIcon, Inbox, Languages, Layers, LineChart, Lock, Mail, Megaphone, MapPin, Mic, BookOpen, Phone, PenLine, PieChart, Plug, Quote, Repeat, Rocket, CalendarDays, Search, Send, ShieldCheck, ShoppingCart, Smartphone, Sparkles, Star, Target, TrendingUp, Users, Video, Wallet, Workflow, Check, Loader2, Youtube, Zap } from 'lucide-react';
+import { Activity, ArrowUpRight, BarChart3, BookUser, Brain, BrainCircuit, Building2, Captions, Clock, Cloud, Code2, Command, Cpu, Database, Factory, FileSearch, GitBranch, GraduationCap, Hash, Headset, Image as ImageIcon, Inbox, Languages, Layers, LineChart, ListChecks, Lock, Mail, Megaphone, MapPin, Mic, BookOpen, Phone, PhoneCall, PenLine, PieChart, Plug, Quote, Repeat, Rocket, CalendarDays, Search, Send, ShieldCheck, ShoppingCart, Smartphone, Sparkles, Star, Target, TrendingUp, UserCheck, UserPlus, Users, Video, Wallet, Workflow, Check, Loader2, Youtube, Zap } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import CountUp from '@/components/CountUp';
 import Seo from '@/components/Seo';
@@ -192,6 +192,37 @@ const PRODUCTS = [{
     title: 'AI Observability',
     copy: 'Track every AI call, tool use, token and cost — down to which agent did what and when.'
   }]
+}, {
+  name: 'Callora',
+  url: 'https://ashy-tree-046541100.3.azurestaticapps.net/',
+  tag: 'Campaign calling & lead generation',
+  tagline: 'AI and human agents, calling from the same campaign.',
+  copy: "Callora runs your outbound calling and lead generation from one shared queue — an AI voice agent dials leads directly, your reps pick up wherever it left off, and new leads flow in from both AI sourcing and your team's own work. Currently in UAT.",
+  features: [{
+    icon: PhoneCall,
+    title: 'AI Outbound Calling',
+    copy: 'An AI voice agent calls connected contacts and leads directly from your campaign list — no manual dialing.'
+  }, {
+    icon: Headset,
+    title: 'Human Agent Calling',
+    copy: 'Your reps call from the exact same queue, picking up wherever the AI left off.'
+  }, {
+    icon: UserPlus,
+    title: 'AI Lead Generation',
+    copy: 'AI sources and qualifies new leads against your ideal customer profile, ready to call.'
+  }, {
+    icon: UserCheck,
+    title: 'Human-Assisted Lead Generation',
+    copy: 'Reps add, import or qualify leads by hand whenever it needs a human read.'
+  }, {
+    icon: ListChecks,
+    title: 'Campaign Management',
+    copy: "Organize contacts into calling campaigns, track who's been reached, and see what's working."
+  }, {
+    icon: BookUser,
+    title: 'Shared Contact & Lead Directory',
+    copy: 'One directory AI and human agents both call from — no duplicate outreach, no dropped leads.'
+  }]
 }];
 const WORK = [{
   image: 'https://images.hostinger.com/94341abb-aeb6-466c-8de3-f1c6f2755954.png',
@@ -293,24 +324,73 @@ const TEAM = [{
   role: 'Director of Product Design'
 }];
 const STACK = ['React', 'TypeScript', 'Node.js', 'Python', 'PyTorch', 'LangChain', 'PostgreSQL', 'Kubernetes', 'Terraform', 'AWS', 'Azure', 'Flutter', 'Go', 'Snowflake'];
-const AI_PROMPTS = [{
-  q: "Prepare this month's business report",
-  a: 'Revenue is $245,300, up 17% from last month. Profit is up 25%. Three enterprise customers represent 38% of revenue — worth diversifying.',
-  metrics: [['$245.3k', 'Revenue', '+17%'], ['$91.2k', 'Expenses', '-4%'], ['$154.1k', 'Profit', '+25%']]
+const DEMO_PRODUCTS = [{
+  key: 'aibos',
+  name: 'AIBOS',
+  subtitle: 'AI Command Center',
+  greeting: 'Good morning. What would you like me to do?',
+  placeholder: 'Ask AIBOS anything about your business...',
+  fallback: "Got it — I'd pull that from your connected systems and bring back an answer here. This is a demo; talk to us to see AIBOS running on your real data.",
+  prompts: [{
+    q: "Prepare this month's business report",
+    a: 'Revenue is $245,300, up 17% from last month. Profit is up 25%. Three enterprise customers represent 38% of revenue — worth diversifying.',
+    metrics: [['$245.3k', 'Revenue', '+17%'], ['$91.2k', 'Expenses', '-4%'], ['$154.1k', 'Profit', '+25%']]
+  }, {
+    q: 'Find unpaid invoices',
+    a: '3 invoices are overdue, totaling $31,500. Northgate Supplies is 42 days past due — want me to draft a reminder?'
+  }, {
+    q: 'Show sales performance',
+    a: 'Revenue is $245,300, up 17% from last month. Product A generated $83,000 and is your top performer this quarter.'
+  }, {
+    q: 'Summarize customer support',
+    a: "1,243 tickets this month, up 8%. 3 have been open past 48 hours, mostly billing questions — including one flagged VIP customer who hasn't heard back. Want me to draft replies for review?"
+  }]
 }, {
-  q: 'Find unpaid invoices',
-  a: '3 invoices are overdue, totaling $31,500. Northgate Supplies is 42 days past due — want me to draft a reminder?'
+  key: 'postora',
+  name: 'Postora',
+  subtitle: 'Social AI Assistant',
+  greeting: 'Good morning. What should we create today?',
+  placeholder: 'Ask Postora to draft, plan or analyze...',
+  fallback: "Got it — I'd generate that from your brand voice and connected channels. This is a demo; talk to us to see Postora running on your real accounts.",
+  prompts: [{
+    q: 'Draft a LinkedIn post about our new feature',
+    a: "Drafted 3 variations in your brand voice — hook, value, CTA. Want me to schedule the best one for Tuesday at 9am, your highest-engagement slot?"
+  }, {
+    q: 'What are competitors posting this week',
+    a: "Tracked 4 competitors — 2 are running a Black Friday angle, none have posted about AI features yet. That's a gap you could own."
+  }, {
+    q: "Show this month's engagement",
+    a: 'Engagement is up 24% this month. Reels are outperforming static posts 3:1 — your top post drove most of the new follows.',
+    metrics: [['+24%', 'Engagement', 'This month'], ['3:1', 'Reels vs static', 'Format mix'], ['68%', 'New follows', 'From top post']]
+  }, {
+    q: 'Generate hashtags for a SaaS launch post',
+    a: '12 hashtags ready — a mix of high-volume, mid-competition and niche tags, so you get reach without getting lost in the noise.'
+  }]
 }, {
-  q: 'Show sales performance',
-  a: 'Revenue is $245,300, up 17% from last month. Product A generated $83,000 and is your top performer this quarter.'
-}, {
-  q: 'Create a social campaign for Product A',
-  a: 'Drafted a 5-post LinkedIn + Instagram campaign — audience, captions and images ready, scheduled across the next two weeks.'
-}, {
-  q: 'Summarize customer support',
-  a: "1,243 tickets this month, up 8%. 3 have been open past 48 hours, mostly billing questions — including one flagged VIP customer who hasn't heard back. Want me to draft replies for review?"
+  key: 'callora',
+  name: 'Callora',
+  subtitle: 'Calling & Leads',
+  greeting: 'Good morning. Who should we reach out to?',
+  placeholder: 'Ask Callora about leads or calls...',
+  fallback: "Got it — I'd pull that from your campaign and contact data. This is a demo; talk to us to see Callora running on your real leads.",
+  prompts: [{
+    q: "Call today's new leads",
+    a: "Queued 14 new leads for AI outbound calling. I'll flag anyone who asks for a human and hand off live."
+  }, {
+    q: "Which leads haven't been called yet",
+    a: '23 leads in the Fall Promo campaign are still uncalled, 9 tagged high-intent. Want AI to start dialing, or assign them to the team?'
+  }, {
+    q: 'Find new leads matching our ideal customer profile',
+    a: 'Found 41 leads matching your ICP this week — 12 already have verified phone numbers and are ready to queue.'
+  }, {
+    q: "How did yesterday's calling campaign go",
+    a: '312 calls placed — 267 by AI, 45 by your team. 38 conversations booked a follow-up.',
+    metrics: [['312', 'Calls placed', 'Yesterday'], ['267', 'By AI', ''], ['38', 'Follow-ups booked', '']]
+  }]
 }];
 function AiCommandDemo() {
+  const [productKey, setProductKey] = useState(DEMO_PRODUCTS[0].key);
+  const product = DEMO_PRODUCTS.find(p => p.key === productKey);
   const [active, setActive] = useState(null);
   const [stage, setStage] = useState('idle');
   const [input, setInput] = useState('');
@@ -321,12 +401,19 @@ function AiCommandDemo() {
     setStage('thinking');
     timeoutRef.current = setTimeout(() => setStage('answered'), 900);
   };
+  const switchProduct = key => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setProductKey(key);
+    setActive(null);
+    setStage('idle');
+    setInput('');
+  };
   const submit = e => {
     e.preventDefault();
     if (!input.trim() || stage === 'thinking') return;
     runPrompt({
       q: input,
-      a: "Got it — I'd pull that from your connected systems and bring back an answer here. This is a demo; talk to us to see AIBOS running on your real data."
+      a: product.fallback
     });
     setInput('');
   };
@@ -341,16 +428,22 @@ function AiCommandDemo() {
                     <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
                     <span className="h-2.5 w-2.5 rounded-full bg-amber-400/70" />
                     <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/70" />
-                    <span className="ml-2 text-xs font-medium text-slate-400">AIBOS · AI Command Center</span>
                 </div>
                 <span className="rounded-full border border-sky-400/30 bg-sky-400/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-sky-300">Live demo</span>
             </div>
 
-            <div className="mt-5 flex-1">
+            <div className="mt-3 flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 p-1" role="tablist" aria-label="Switch product demo">
+                {DEMO_PRODUCTS.map(p => <button key={p.key} type="button" role="tab" aria-selected={p.key === productKey} onClick={() => switchProduct(p.key)} className={`flex-1 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${p.key === productKey ? 'bg-sky-500 text-white' : 'text-slate-400 hover:text-white'}`}>
+                        {p.name}
+                    </button>)}
+            </div>
+            <p className="mt-2 text-xs font-medium text-slate-500">{product.name} · {product.subtitle}</p>
+
+            <div className="mt-4 flex-1">
                 {!active ? <>
-                        <p className="font-display text-lg font-semibold text-white">Good morning. What would you like me to do?</p>
+                        <p className="font-display text-lg font-semibold text-white">{product.greeting}</p>
                         <div className="mt-4 flex flex-wrap gap-2">
-                            {AI_PROMPTS.map(p => <button key={p.q} type="button" onClick={() => runPrompt(p)} className="rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-left text-xs font-medium text-slate-200 transition-colors hover:border-sky-400/40 hover:bg-sky-400/10 hover:text-white">
+                            {product.prompts.map(p => <button key={p.q} type="button" onClick={() => runPrompt(p)} className="rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-left text-xs font-medium text-slate-200 transition-colors hover:border-sky-400/40 hover:bg-sky-400/10 hover:text-white">
                                     {p.q}
                                 </button>)}
                         </div>
@@ -387,7 +480,7 @@ function AiCommandDemo() {
             </div>
 
             <form onSubmit={submit} className="mt-5 flex items-center gap-2 border-t border-white/10 pt-4">
-                <input value={input} onChange={e => setInput(e.target.value)} placeholder="Ask AIBOS anything about your business..." className="min-w-0 flex-1 bg-transparent text-sm text-white placeholder:text-slate-500 outline-none" />
+                <input value={input} onChange={e => setInput(e.target.value)} placeholder={product.placeholder} className="min-w-0 flex-1 bg-transparent text-sm text-white placeholder:text-slate-500 outline-none" />
                 <button type="submit" aria-label="Send" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sky-500 text-white transition-colors hover:bg-sky-400">
                     <Send className="h-4 w-4" />
                 </button>
@@ -497,12 +590,19 @@ function Hero() {
         </section>;
 }
 function Marquee() {
-  return <div className="relative overflow-hidden border-y border-border bg-secondary py-5 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
-            <div className="kt-marquee-track flex w-max gap-12 whitespace-nowrap">
-                {[...STACK, ...STACK].map((s, i) => <span key={`${s}-${i}`} className="flex items-center gap-12 font-display text-sm font-medium uppercase tracking-[0.22em] text-muted-foreground">
-                        {s}
-                        <span className="h-1 w-1 rounded-full bg-primary/40" aria-hidden="true" />
-                    </span>)}
+  return <div className="relative overflow-hidden border-y border-white/10 bg-[hsl(var(--ink))] py-5">
+            <div className="absolute inset-0 circuit-grid opacity-20" aria-hidden="true" />
+            <div className="relative mx-auto flex max-w-[90rem] items-center gap-6 px-5 sm:px-8">
+                <span className="hidden shrink-0 font-display text-xs font-semibold uppercase tracking-[0.22em] text-sky-400 sm:block">Our stack</span>
+                <span className="hidden h-4 w-px shrink-0 bg-white/15 sm:block" aria-hidden="true" />
+                <div className="relative flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+                    <div className="kt-marquee-track flex w-max gap-10 whitespace-nowrap">
+                        {[...STACK, ...STACK].map((s, i) => <span key={`${s}-${i}`} className="flex items-center gap-10 font-display text-sm font-medium uppercase tracking-[0.22em] text-slate-400 transition-colors hover:text-white">
+                                {s}
+                                <span className="h-1 w-1 rounded-full bg-sky-400/50" aria-hidden="true" />
+                            </span>)}
+                    </div>
+                </div>
             </div>
         </div>;
 }

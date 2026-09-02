@@ -483,3 +483,195 @@
 - url: http://localhost:3000/terms-and-conditions
 - via: replaceState
 
+## 2026-09-02 16:17:22.535Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 16:17:22.677Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-02 16:18:00.850Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Services"}
+
+## 2026-09-02 16:18:00.850Z navigate
+- url: http://localhost:3000/#services
+- via: popstate
+
+## 2026-09-02 16:18:03.536Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Products"}
+
+## 2026-09-02 16:18:03.537Z navigate
+- url: http://localhost:3000/#products
+- via: popstate
+
+## 2026-09-02 16:18:06.192Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Work"}
+
+## 2026-09-02 16:18:06.192Z navigate
+- url: http://localhost:3000/#work
+- via: popstate
+
+## 2026-09-02 16:18:07.606Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Company"}
+
+## 2026-09-02 16:18:07.607Z navigate
+- url: http://localhost:3000/#company
+- via: popstate
+
+## 2026-09-02 16:18:09.471Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Contact"}
+
+## 2026-09-02 16:18:09.471Z navigate
+- url: http://localhost:3000/#contact
+- via: popstate
+
+## 2026-09-02 16:18:13.893Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Products"}
+
+## 2026-09-02 16:18:13.893Z navigate
+- url: http://localhost:3000/#products
+- via: popstate
+
+## 2026-09-02 16:18:17.387Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Book a call"}
+
+## 2026-09-02 16:18:17.387Z navigate
+- url: http://localhost:3000/#contact
+- via: popstate
+
+## 2026-09-02 16:18:23.503Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Products"}
+
+## 2026-09-02 16:18:23.503Z navigate
+- url: http://localhost:3000/#products
+- via: popstate
+
+## 2026-09-02 16:18:25.918Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Visit Postora "}
+
+## 2026-09-02 16:18:35.947Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Our productsSoftware we build and run ourselvesWe don't only ship for clients — we operate our own products in production, so every recommendation we make is battle-tested on our own infrastructure first.PostoraAIBOSPostoraSocial media AI platformOpen any tool — content, images, strategy, analytics, competitors, and more.Visit Postora We built Postora to run our own social presence, then opened it up. Every AI feature below is in production, used daily, not a roadmap slide.AI Content GeneratorDraft platform-ready posts in your brand voice from a short brief.AI Caption GeneratorUpload an image — Vision describes it, then we write captions per platform.AI Hashtag GeneratorGenerate relevant and low-competition hashtags for your post and industry.AI Content RepurposingTurn one blog or transcript into LinkedIn, Instagram, YouTube, and more.AI Content AnalyzerScore hook, readability, engagement, CTA, and hashtags before you publish.AI Image GeneratorCreate on-brand visuals sized for LinkedIn, Instagram, Facebook, and YouTube.AI Content CalendarPlan a week or month of slots with topics, captions, and image prompts.AI Social StrategyBuild a channel mix, pillars, and ready-to-post content from your goals.AI Brand VoiceSet tone, personality, and audience once — every AI draft follows it.AI Best Time to PostSee when your audience is most active from engagement history.AI Analytics AssistantAsk why engagement moved — frequency, mix, timing, and content type.AI Competitor AnalysisTrack competitors and find topics, formats, gaps, and trending themes.AI Trend DetectionSpot rising topics with growth signals, then generate a full campaign in one click.AI Video GenerationText → script → voice → scenes → subtitles → Reels, Shorts, TikTok, and Facebook Reels.AI YouTubeTopic → research → script → title → description → tags → thumbnail, plus high-CTR title packs.AI Content TranslationLocalize one post into English, Urdu, Arabic, French, Spanish, German, and Chinese — naturally, not liter..."}
+
+## 2026-09-02 16:26:50.345Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 16:26:50.421Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-02 16:26:57.942Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 16:27:12.392Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Postora"}
+
+## 2026-09-02 16:27:19.025Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Callora"}
+
+## 2026-09-02 16:27:19.666Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"How did yesterday's calling campaign go"}
+
+## 2026-09-02 16:27:27.817Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Callora"}
+
+## 2026-09-02 16:32:34.846Z load
+- url: http://localhost:3000/#products
+
+## 2026-09-02 16:32:34.925Z navigate
+- url: http://localhost:3000/#products
+- via: replaceState
+
+## 2026-09-02 16:32:36.603Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"KabirTech"}
+
+## 2026-09-02 16:32:36.670Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 16:32:36.712Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-02 16:32:40.380Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 16:32:40.596Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 16:32:40.771Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 16:32:40.958Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 16:32:41.132Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 16:32:41.313Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 16:32:43.936Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Postora"}
+
+## 2026-09-02 16:32:47.991Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Callora"}
+
+## 2026-09-02 16:32:52.380Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Call today's new leads"}
+
+## 2026-09-02 16:32:54.835Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Postora"}
+
+## 2026-09-02 16:32:56.347Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Callora"}
+
+## 2026-09-02 16:32:57.434Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"AIBOS"}
+
+## 2026-09-02 16:33:04.527Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Callora"}
+
+## 2026-09-02 16:33:15.202Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Postora"}
+
+## 2026-09-02 16:33:16.122Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Callora"}
+
+## 2026-09-02 16:33:17.123Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"AIBOS"}
+
+## 2026-09-02 16:33:18.113Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Postora"}
+
+## 2026-09-02 16:33:18.664Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Callora"}
+
+## 2026-09-02 16:33:19.585Z click
+- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Live demo"}
+
+## 2026-09-02 16:33:21.207Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"AIBOS"}
+
+## 2026-09-02 16:33:22.335Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Postora"}
+
+## 2026-09-02 16:33:24.166Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Draft a LinkedIn post about our new feature"}
+
+## 2026-09-02 16:35:23.012Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 16:36:15.864Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 16:37:54.274Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 16:38:49.183Z load
+- url: http://localhost:3000/
+
+## 2026-09-02 16:38:58.869Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"KabirTech"}
+
+## 2026-09-02 16:38:58.939Z load
+- url: http://localhost:3000/
+
