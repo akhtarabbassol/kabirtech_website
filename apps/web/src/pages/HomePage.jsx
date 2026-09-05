@@ -194,7 +194,7 @@ const PRODUCTS = [{
   }]
 }, {
   name: 'Callora',
-  url: 'https://ashy-tree-046541100.3.azurestaticapps.net/',
+  url: 'https://callora.kabirtech.tech/',
   tag: 'Campaign calling & lead generation',
   tagline: 'AI and human agents, calling from the same campaign.',
   copy: "Callora runs your outbound calling and lead generation from one shared queue — an AI voice agent dials leads directly, your reps pick up wherever it left off, and new leads flow in from both AI sourcing and your team's own work. Currently in UAT.",

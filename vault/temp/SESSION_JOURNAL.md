@@ -816,3 +816,16 @@
 ## 2026-09-02 17:11:22.627Z load
 - url: http://localhost:3001/
 
+## 2026-09-05 16:05:51.263Z load
+- url: http://localhost:3000/
+
+## 2026-09-05 16:05:51.416Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-05 16:05:54.791Z load
+- url: http://localhost:3000/
+
+## 2026-09-05 16:06:00.686Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Callora"}
+
