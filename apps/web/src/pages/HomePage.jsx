@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Activity, ArrowUpRight, BarChart3, BookUser, Brain, BrainCircuit, Building2, Captions, Clock, Cloud, Code2, Command, Cpu, Database, Factory, FileSearch, GitBranch, GraduationCap, Hash, Headset, Image as ImageIcon, Inbox, Languages, Layers, LineChart, ListChecks, Lock, Mail, Megaphone, MapPin, Mic, BookOpen, Phone, PhoneCall, PenLine, PieChart, Plug, Quote, Repeat, Rocket, CalendarDays, Search, Send, ShieldCheck, ShoppingCart, Smartphone, Sparkles, Star, Target, TrendingUp, UserCheck, UserPlus, Users, Video, Wallet, Workflow, Check, Loader2, Youtube, Zap } from 'lucide-react';
+import { Activity, ArrowUpRight, BarChart3, BookUser, Brain, BrainCircuit, Building2, Captions, Clock, Cloud, Code2, Command, Cpu, Database, Factory, FileSearch, GitBranch, GraduationCap, Hash, Headset, Image as ImageIcon, Inbox, Languages, Layers, LineChart, ListChecks, Lock, Mail, Megaphone, MapPin, Mic, BookOpen, Phone, PhoneCall, PenLine, PieChart, Plug, Quote, Repeat, Rocket, CalendarDays, Search, Send, ShieldCheck, ShoppingBag, ShoppingCart, Smartphone, Sparkles, Star, Target, TrendingUp, UserCheck, UserPlus, Users, Video, Wallet, Workflow, Check, Loader2, Youtube, Zap } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import CountUp from '@/components/CountUp';
 import Seo from '@/components/Seo';
@@ -43,11 +43,11 @@ const SERVICES = [{
   points: ['Vetted senior talent', 'Your tooling & rituals', 'Flexible contracts']
 }];
 const PRODUCTS = [{
-  name: 'Postora',
+  name: 'Postora AI',
   url: 'https://postora.kabirtechsolutions.com/',
   tag: 'Social media AI platform',
   tagline: 'Open any tool — content, images, strategy, analytics, competitors, and more.',
-  copy: 'We built Postora to run our own social presence, then opened it up. Every AI feature below is in production, used daily, not a roadmap slide.',
+  copy: 'We built Postora AI to run our own social presence, then opened it up. Every AI feature below is in production, used daily, not a roadmap slide.',
   features: [{
     icon: PenLine,
     title: 'AI Content Generator',
@@ -193,11 +193,11 @@ const PRODUCTS = [{
     copy: 'Track every AI call, tool use, token and cost — down to which agent did what and when.'
   }]
 }, {
-  name: 'Callora',
+  name: 'Callora AI',
   url: 'https://callora.kabirtech.tech/',
   tag: 'Campaign calling & lead generation',
   tagline: 'AI and human agents, calling from the same campaign.',
-  copy: "Callora runs your outbound calling and lead generation from one shared queue — an AI voice agent dials leads directly, your reps pick up wherever it left off, and new leads flow in from both AI sourcing and your team's own work. Currently in UAT.",
+  copy: "Callora AI runs your outbound calling and lead generation from one shared queue — an AI voice agent dials leads directly, your reps pick up wherever it left off, and new leads flow in from both AI sourcing and your team's own work. Currently in UAT.",
   features: [{
     icon: PhoneCall,
     title: 'AI Outbound Calling',
@@ -247,6 +247,11 @@ const WORK = [{
   metrics: [['18', 'clinics migrated'], ['0', 'audit findings']]
 }];
 const COMPLETED = [{
+  icon: ShoppingBag,
+  tag: 'Ecommerce',
+  title: 'Headless storefront migration for a DTC apparel brand',
+  result: 'Checkout conversion up 22%'
+}, {
   icon: ShoppingCart,
   tag: 'Retail',
   title: 'Inventory sync across 40 stores',
@@ -347,11 +352,11 @@ const DEMO_PRODUCTS = [{
   }]
 }, {
   key: 'postora',
-  name: 'Postora',
+  name: 'Postora AI',
   subtitle: 'Social AI Assistant',
   greeting: 'Good morning. What should we create today?',
-  placeholder: 'Ask Postora to draft, plan or analyze...',
-  fallback: "Got it — I'd generate that from your brand voice and connected channels. This is a demo; talk to us to see Postora running on your real accounts.",
+  placeholder: 'Ask Postora AI to draft, plan or analyze...',
+  fallback: "Got it — I'd generate that from your brand voice and connected channels. This is a demo; talk to us to see Postora AI running on your real accounts.",
   prompts: [{
     q: 'Draft a LinkedIn post about our new feature',
     a: "Drafted 3 variations in your brand voice — hook, value, CTA. Want me to schedule the best one for Tuesday at 9am, your highest-engagement slot?"
@@ -368,11 +373,11 @@ const DEMO_PRODUCTS = [{
   }]
 }, {
   key: 'callora',
-  name: 'Callora',
+  name: 'Callora AI',
   subtitle: 'Calling & Leads',
   greeting: 'Good morning. Who should we reach out to?',
-  placeholder: 'Ask Callora about leads or calls...',
-  fallback: "Got it — I'd pull that from your campaign and contact data. This is a demo; talk to us to see Callora running on your real leads.",
+  placeholder: 'Ask Callora AI about leads or calls...',
+  fallback: "Got it — I'd pull that from your campaign and contact data. This is a demo; talk to us to see Callora AI running on your real leads.",
   prompts: [{
     q: "Call today's new leads",
     a: "Queued 14 new leads for AI outbound calling. I'll flag anyone who asks for a human and hand off live."
@@ -1003,7 +1008,7 @@ export default function HomePage() {
             <Seo
                 title="KabirTech Solutions | AI Engineering Studio & Custom Software"
                 description="AI-native software, engineered to ship — applied AI and custom engineering delivered by senior engineers in two-week sprints."
-                keywords="AI engineering studio, AI development company, machine learning consulting, custom software development, mobile app development, cloud DevOps services, dedicated engineering teams, Postora, AIBOS"
+                keywords="AI engineering studio, AI development company, machine learning consulting, custom software development, mobile app development, cloud DevOps services, dedicated engineering teams, Postora AI, Callora AI, AIBOS"
                 image={BANNER}
                 siteName="KabirTech Solutions"
                 jsonLd={[ORGANIZATION_SCHEMA, WEBSITE_SCHEMA, ...PRODUCT_SCHEMAS]}
