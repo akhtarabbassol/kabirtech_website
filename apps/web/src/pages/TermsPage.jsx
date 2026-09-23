@@ -14,8 +14,8 @@ const SECTIONS = [{
 }, {
   title: '2. What this website is',
   body: [
-    'This site is informational: it describes KabirTech’s services and products (including Postora AI, Callora AI and AIBOS) and lets you get in touch about a project. Nothing on this site is an offer to contract, and browsing it doesn’t create a client relationship, engagement, or subscription with KabirTech.',
-    'Feature walkthroughs for Postora AI, Callora AI and AIBOS on this site — including the interactive "AI Command Center" demo — use illustrative, simulated responses to show how the product works. They are not connected to a live AI backend or your real business data.'
+    'This site is informational: it describes KabirTech’s services and products (including Postora AI, Callora AI and Mediora AI) and lets you get in touch about a project. Nothing on this site is an offer to contract, and browsing it doesn’t create a client relationship, engagement, or subscription with KabirTech.',
+    'Feature walkthroughs for Postora AI, Callora AI and Mediora AI on this site — including the interactive product demo in the hero section — use illustrative, simulated responses to show how each product works. They are not connected to a live AI backend or your real business or patient data.'
   ]
 }, {
   title: '3. Permitted use',
@@ -25,7 +25,7 @@ const SECTIONS = [{
 }, {
   title: '4. Intellectual property',
   body: [
-    'The text, design, graphics, and code that make up this website, and the KabirTech, Postora AI, Callora AI, and AIBOS names and logos, belong to KabirTech Solutions unless otherwise noted. You may view and share pages of this site for personal, non-commercial reference, but you may not copy, republish, or reuse our content, branding, or product names without our written permission.'
+    'The text, design, graphics, and code that make up this website, and the KabirTech, Postora AI, Callora AI, and Mediora AI names and logos, belong to KabirTech Solutions unless otherwise noted. You may view and share pages of this site for personal, non-commercial reference, but you may not copy, republish, or reuse our content, branding, or product names without our written permission.'
   ]
 }, {
   title: '5. Contact form submissions',

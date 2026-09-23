@@ -842,3 +842,375 @@
 ## 2026-09-09 08:30:02.138Z load
 - url: http://localhost:3000/
 
+## 2026-09-14 16:30:02.392Z load
+- url: http://localhost:3000/
+
+## 2026-09-14 16:30:03.122Z load
+- url: http://localhost:3000/
+
+## 2026-09-14 16:30:03.185Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-14 16:30:22.785Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Mediora AI"}
+
+## 2026-09-14 16:30:22.890Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Show today's practice overview"}
+
+## 2026-09-14 16:30:31.069Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Mediora AI"}
+
+## 2026-09-14 23:25:07.841Z load
+- url: http://localhost:3000/
+
+## 2026-09-14 23:25:08.444Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-14 23:25:12.777Z load
+- url: http://localhost:3000/
+
+## 2026-09-14 23:30:14.816Z load
+- url: http://localhost:3000/
+
+## 2026-09-14 23:35:41.728Z load
+- url: http://localhost:3000/
+
+## 2026-09-14 23:36:34.135Z navigate
+- url: http://localhost:3000/#services
+- via: popstate
+
+## 2026-09-14 23:37:36.738Z load
+- url: http://localhost:3000/
+
+## 2026-09-14 23:37:36.851Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-14 23:37:41.720Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"KabirTechServicesProductsWorkCompanyContact +9 (232) 148-29814Book a call"}
+
+## 2026-09-22 16:09:54.911Z load
+- url: http://localhost:3000/
+
+## 2026-09-22 16:09:55.161Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-22 16:09:58.194Z load
+- url: http://localhost:3000/
+
+## 2026-09-22 16:10:20.050Z load
+- url: http://localhost:3000/services
+
+## 2026-09-22 16:10:20.079Z navigate
+- url: http://localhost:3000/services
+- via: replaceState
+
+## 2026-09-22 16:10:33.343Z load
+- url: http://localhost:3000/products
+
+## 2026-09-22 16:10:33.369Z navigate
+- url: http://localhost:3000/products
+- via: replaceState
+
+## 2026-09-22 16:10:47.970Z click
+- element: {"tag":"button","role":"tab","ariaLabel":null,"name":null,"type":"button","id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Callora AI"}
+
+## 2026-09-22 16:10:56.547Z load
+- url: http://localhost:3000/work
+
+## 2026-09-22 16:10:56.575Z navigate
+- url: http://localhost:3000/work
+- via: replaceState
+
+## 2026-09-22 16:36:56.526Z load
+- url: http://localhost:3000/company
+
+## 2026-09-22 16:36:56.598Z navigate
+- url: http://localhost:3000/company
+- via: replaceState
+
+## 2026-09-22 16:37:36.487Z load
+- url: http://localhost:3000/contact
+
+## 2026-09-22 16:37:36.527Z navigate
+- url: http://localhost:3000/contact
+- via: replaceState
+
+## 2026-09-22 16:38:12.795Z load
+- url: http://localhost:3000/privacy-policy
+
+## 2026-09-22 16:38:12.836Z navigate
+- url: http://localhost:3000/privacy-policy
+- via: replaceState
+
+## 2026-09-22 16:38:50.497Z load
+- url: http://localhost:3000/terms-and-conditions
+
+## 2026-09-22 16:38:50.543Z navigate
+- url: http://localhost:3000/terms-and-conditions
+- via: replaceState
+
+## 2026-09-22 16:39:34.203Z load
+- url: http://localhost:3000/
+
+## 2026-09-22 16:39:34.244Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-22 16:40:31.050Z load
+- url: http://localhost:3000/services
+
+## 2026-09-22 16:40:31.091Z navigate
+- url: http://localhost:3000/services
+- via: replaceState
+
+## 2026-09-22 16:41:26.755Z load
+- url: http://localhost:3000/products
+
+## 2026-09-22 16:41:26.796Z navigate
+- url: http://localhost:3000/products
+- via: replaceState
+
+## 2026-09-22 16:49:51.912Z load
+- url: http://localhost:3000/work
+
+## 2026-09-22 16:49:51.956Z navigate
+- url: http://localhost:3000/work
+- via: replaceState
+
+## 2026-09-22 16:51:33.667Z load
+- url: http://localhost:3000/company
+
+## 2026-09-22 16:51:33.713Z navigate
+- url: http://localhost:3000/company
+- via: replaceState
+
+## 2026-09-22 16:52:30.905Z load
+- url: http://localhost:3000/contact
+
+## 2026-09-22 16:52:30.938Z navigate
+- url: http://localhost:3000/contact
+- via: replaceState
+
+## 2026-09-22 17:03:19.890Z load
+- url: http://localhost:3000/
+
+## 2026-09-22 17:03:19.975Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-22 17:03:34.762Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Products"}
+
+## 2026-09-22 17:03:34.851Z load
+- url: http://localhost:3000/products
+
+## 2026-09-22 17:03:34.879Z navigate
+- url: http://localhost:3000/products
+- via: replaceState
+
+## 2026-09-22 17:03:39.856Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Services"}
+
+## 2026-09-22 17:03:39.956Z load
+- url: http://localhost:3000/services
+
+## 2026-09-22 17:03:39.987Z navigate
+- url: http://localhost:3000/services
+- via: replaceState
+
+## 2026-09-22 17:03:49.252Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Products"}
+
+## 2026-09-22 17:03:49.322Z load
+- url: http://localhost:3000/products
+
+## 2026-09-22 17:03:49.351Z navigate
+- url: http://localhost:3000/products
+- via: replaceState
+
+## 2026-09-22 17:04:03.045Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Work"}
+
+## 2026-09-22 17:04:03.141Z load
+- url: http://localhost:3000/work
+
+## 2026-09-22 17:04:03.168Z navigate
+- url: http://localhost:3000/work
+- via: replaceState
+
+## 2026-09-22 17:04:58.916Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Company"}
+
+## 2026-09-22 17:04:58.999Z load
+- url: http://localhost:3000/company
+
+## 2026-09-22 17:04:59.052Z navigate
+- url: http://localhost:3000/company
+- via: replaceState
+
+## 2026-09-22 17:05:22.477Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Contact"}
+
+## 2026-09-22 17:05:22.566Z load
+- url: http://localhost:3000/contact
+
+## 2026-09-22 17:05:22.613Z navigate
+- url: http://localhost:3000/contact
+- via: replaceState
+
+## 2026-09-22 17:05:24.385Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Services"}
+
+## 2026-09-22 17:05:24.451Z load
+- url: http://localhost:3000/services
+
+## 2026-09-22 17:05:24.480Z navigate
+- url: http://localhost:3000/services
+- via: replaceState
+
+## 2026-09-22 17:05:26.632Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"KabirTech"}
+
+## 2026-09-22 17:05:26.712Z load
+- url: http://localhost:3000/
+
+## 2026-09-22 17:05:26.745Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-22 17:12:49.343Z load
+- url: http://localhost:3000/
+
+## 2026-09-22 17:12:49.384Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-22 17:13:00.236Z load
+- url: http://localhost:3000/services
+
+## 2026-09-22 17:13:00.273Z navigate
+- url: http://localhost:3000/services
+- via: replaceState
+
+## 2026-09-22 17:14:53.460Z load
+- url: http://localhost:3000/
+
+## 2026-09-22 17:14:55.860Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" AI engineering studioAI-native software,engineered to ship.KabirTech Solutions is an AI engineering studio — equal parts product company and project partner. We build our own AI products, and we design, build and operate production AI systems for clients across the US, UK, Australia and beyond. Senior engineers, fixed sprints, code you own outright.Start a project See our work120+Projects delivered11Years building38Engineers on staffLive demoPostora AICallora AIMediora AIPostora AI · Social AI AssistantGood morning. What should we create today?Draft a LinkedIn post about our new featureWhat are competitors posting this weekShow this month's engagementGenerate hashtags for a SaaS launch post"}
+
+## 2026-09-22 17:15:47.465Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Services"}
+
+## 2026-09-22 17:15:47.549Z load
+- url: http://localhost:3000/services
+
+## 2026-09-22 17:15:47.577Z navigate
+- url: http://localhost:3000/services
+- via: replaceState
+
+## 2026-09-22 17:16:53.006Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Products"}
+
+## 2026-09-22 17:16:53.082Z load
+- url: http://localhost:3000/products
+
+## 2026-09-22 17:16:53.121Z navigate
+- url: http://localhost:3000/products
+- via: replaceState
+
+## 2026-09-22 17:17:08.324Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Work"}
+
+## 2026-09-22 17:17:08.403Z load
+- url: http://localhost:3000/work
+
+## 2026-09-22 17:17:08.452Z navigate
+- url: http://localhost:3000/work
+- via: replaceState
+
+## 2026-09-23 02:39:07.238Z load
+- url: http://localhost:3000/services
+
+## 2026-09-23 02:39:07.288Z load
+- url: http://localhost:3000/work
+
+## 2026-09-23 05:33:22.732Z load
+- url: http://localhost:3000/work
+
+## 2026-09-23 05:33:22.904Z load
+- url: http://localhost:3000/services
+
+## 2026-09-23 07:05:17.668Z load
+- url: http://localhost:3000/work
+
+## 2026-09-23 07:33:22.166Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"KabirTech"}
+
+## 2026-09-23 07:33:22.244Z load
+- url: http://localhost:3000/
+
+## 2026-09-23 07:33:22.307Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-23 07:33:58.109Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Work"}
+
+## 2026-09-23 07:33:58.196Z load
+- url: http://localhost:3000/work
+
+## 2026-09-23 07:33:58.243Z navigate
+- url: http://localhost:3000/work
+- via: replaceState
+
+## 2026-09-23 07:35:09.114Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Company"}
+
+## 2026-09-23 07:35:09.189Z load
+- url: http://localhost:3000/company
+
+## 2026-09-23 07:35:09.226Z navigate
+- url: http://localhost:3000/company
+- via: replaceState
+
+## 2026-09-23 07:35:19.871Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Work"}
+
+## 2026-09-23 07:35:19.956Z load
+- url: http://localhost:3000/work
+
+## 2026-09-23 07:35:20.003Z navigate
+- url: http://localhost:3000/work
+- via: replaceState
+
+## 2026-09-23 07:36:27.695Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Contact"}
+
+## 2026-09-23 07:36:27.780Z load
+- url: http://localhost:3000/contact
+
+## 2026-09-23 07:36:27.829Z navigate
+- url: http://localhost:3000/contact
+- via: replaceState
+
+## 2026-09-23 07:36:41.941Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"KabirTech"}
+
+## 2026-09-23 07:36:42.018Z load
+- url: http://localhost:3000/
+
+## 2026-09-23 07:36:42.043Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-09-23 10:52:12.344Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Mobile Applications"}
+
+## 2026-09-23 10:52:12.346Z navigate
+- url: http://localhost:3000/services
+- via: pushState
+

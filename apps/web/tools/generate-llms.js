@@ -28,7 +28,11 @@ const EXTRACTION_REGEX = {
 	helmet: /<Helmet[^>]*?>([\s\S]*?)<\/Helmet>/i,
 	helmetTest: /<Helmet[\s\S]*?<\/Helmet>/i,
 	title: /<title[^>]*?>\s*(.*?)\s*<\/title>/i,
-	description: /<meta\s+name=["']description["']\s+content=["'](.*?)["']/i
+	// The closing delimiter is a backreference to whichever quote opened the
+	// attribute (\1), not just "either quote type" — otherwise an apostrophe
+	// inside a double-quoted description (e.g. "what you're building") reads
+	// as the closing quote and truncates the match right there.
+	description: /<meta\s+name=["']description["']\s+content=(["'])(.*?)\1/i
 };
 
 function cleanContent(content) {
@@ -115,7 +119,7 @@ function extractHelmetData(content, filePath, routes) {
 	const descMatch = helmetContent.match(EXTRACTION_REGEX.description);
 
 	const title = cleanText(titleMatch?.[1]);
-	const description = cleanText(descMatch?.[1]);
+	const description = cleanText(descMatch?.[2]);
 
 	const fileName = path.basename(filePath, path.extname(filePath));
 	const url = routes.size && routes.has(fileName)

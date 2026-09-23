@@ -4,24 +4,22 @@ import { Menu, Phone, X } from 'lucide-react';
 
 const LOGO = 'https://horizons-cdn.hostinger.com/b01990a9-0b3d-4660-9a5b-7fcbea39cb56/3ec973cacc742f86a2b43fe64ae98ee0.jpg';
 
-// Hrefs are absolute (`/#services`) rather than bare (`#services`) because
-// Header/Footer render on every page, not just the home page — a bare anchor
-// would silently no-op on a route that has no matching id, e.g. /privacy-policy.
+// Every section now lives on its own route, not a home-page anchor.
 const NAV = [{
   label: 'Services',
-  href: '/#services'
+  href: '/services'
 }, {
   label: 'Products',
-  href: '/#products'
+  href: '/products'
 }, {
   label: 'Work',
-  href: '/#work'
+  href: '/work'
 }, {
   label: 'Company',
-  href: '/#company'
+  href: '/company'
 }, {
   label: 'Contact',
-  href: '/#contact'
+  href: '/contact'
 }];
 
 function useScrolled(threshold = 24) {
@@ -35,28 +33,13 @@ function useScrolled(threshold = 24) {
   return scrolled;
 }
 
-// Scroll-spy: only lights up nav links to sections that actually exist on the
-// current page (the home page) — a no-op elsewhere, e.g. /privacy-policy.
-function useActiveSection() {
-  const [active, setActive] = useState(null);
-  useEffect(() => {
-    const sections = NAV.map(n => document.getElementById(n.href.replace('/#', ''))).filter(Boolean);
-    if (!sections.length) return;
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) setActive(entry.target.id);
-      });
-    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-    sections.forEach(s => observer.observe(s));
-    return () => observer.disconnect();
-  }, []);
-  return active;
-}
-
 function Header() {
   const [open, setOpen] = useState(false);
   const scrolled = useScrolled();
-  const activeSection = useActiveSection();
+  // Plain <a> links do a full navigation between routes (same pattern as the
+  // Privacy/Terms links), so the current path is static for the life of this
+  // mount — no need for react-router's useLocation just to read it once.
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
 
   return <header className={`fixed inset-x-0 top-0 z-50 backdrop-blur-xl transition-all duration-300 ${scrolled ? 'bg-[hsl(var(--ink))]/95 shadow-lg shadow-black/20' : 'bg-[hsl(var(--ink))]/85'}`}>
             <div className={`mx-auto flex max-w-[90rem] items-center justify-between px-5 transition-all duration-300 sm:px-8 ${scrolled ? 'h-[60px]' : 'h-[72px]'}`}>
@@ -72,8 +55,8 @@ function Header() {
 
                 <nav className="hidden items-center gap-9 md:flex">
                     {NAV.map(n => {
-          const isActive = activeSection === n.href.replace('/#', '');
-          return <a key={n.href} href={n.href} aria-current={isActive ? 'true' : undefined} className={`relative py-1 text-sm font-medium transition-colors after:absolute after:-bottom-0.5 after:left-0 after:h-px after:bg-gradient-to-r after:from-sky-400 after:to-violet-400 after:transition-all after:duration-300 ${isActive ? 'text-white after:w-full' : 'text-slate-300 after:w-0 hover:text-white hover:after:w-full'}`}>
+          const isActive = pathname === n.href;
+          return <a key={n.href} href={n.href} aria-current={isActive ? 'page' : undefined} className={`relative py-1 text-sm font-medium transition-colors after:absolute after:-bottom-0.5 after:left-0 after:h-px after:bg-gradient-to-r after:from-sky-400 after:to-violet-400 after:transition-all after:duration-300 ${isActive ? 'text-white after:w-full' : 'text-slate-300 after:w-0 hover:text-white hover:after:w-full'}`}>
                                 {n.label}
                             </a>;
         })}
@@ -83,7 +66,7 @@ function Header() {
                     <a href="tel:+15551240188" className="flex items-center gap-1.5 text-sm font-medium text-slate-300 transition-colors hover:text-white">
                         <Phone className="h-3.5 w-3.5" strokeWidth={1.75} /> +9 (232) 148-29814
                     </a>
-                    <a href="/#contact" className="rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:bg-sky-400 hover:shadow-sky-400/40 active:scale-[0.98]">
+                    <a href="/contact" className="rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:bg-sky-400 hover:shadow-sky-400/40 active:scale-[0.98]">
                         Book a call
                     </a>
                 </div>
@@ -96,10 +79,10 @@ function Header() {
             <AnimatePresence>
                 {open && <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.25, ease: 'easeInOut' }} className="overflow-hidden border-t border-white/10 bg-[hsl(var(--ink))] md:hidden">
                         <div className="px-5 py-4">
-                            {NAV.map((n, i) => <motion.a key={n.href} href={n.href} onClick={() => setOpen(false)} initial={{ opacity: 0, x: -8 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.04, duration: 0.2 }} className={`block py-3 text-base font-medium ${activeSection === n.href.replace('/#', '') ? 'text-sky-400' : 'text-slate-200'}`}>
+                            {NAV.map((n, i) => <motion.a key={n.href} href={n.href} onClick={() => setOpen(false)} initial={{ opacity: 0, x: -8 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.04, duration: 0.2 }} className={`block py-3 text-base font-medium ${pathname === n.href ? 'text-sky-400' : 'text-slate-200'}`}>
                                     {n.label}
                                 </motion.a>)}
-                            <a href="/#contact" onClick={() => setOpen(false)} className="mt-2 block rounded-full bg-sky-500 py-3 text-center text-base font-semibold text-white shadow-lg shadow-sky-500/20">
+                            <a href="/contact" onClick={() => setOpen(false)} className="mt-2 block rounded-full bg-sky-500 py-3 text-center text-base font-semibold text-white shadow-lg shadow-sky-500/20">
                                 Book a call
                             </a>
                         </div>
