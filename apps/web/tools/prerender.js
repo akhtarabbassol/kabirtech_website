@@ -21,9 +21,11 @@ const ROUTES = {
 	'/products': 'products/index.html',
 	'/work': 'work/index.html',
 	'/company': 'company/index.html',
+	'/partnerships': 'partnerships/index.html',
 	'/contact': 'contact/index.html',
 	'/privacy-policy': 'privacy-policy/index.html',
 	'/terms-and-conditions': 'terms-and-conditions/index.html',
+	'/information-security-policy': 'information-security-policy/index.html',
 };
 
 function waitForServer(url, timeoutMs = 15000) {

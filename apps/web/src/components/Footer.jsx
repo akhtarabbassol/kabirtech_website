@@ -15,9 +15,10 @@ function Footer() {
                     {NAV.map(n => <a key={n.href} href={n.href} className="text-sm text-slate-400 transition-colors hover:text-white">{n.label}</a>)}
                 </nav>
                 <div className="flex flex-col items-start gap-2 md:items-end">
-                    <div className="flex gap-4">
+                    <div className="flex flex-wrap justify-start gap-4 md:justify-end">
                         <a href="/privacy-policy" className="text-sm text-slate-400 transition-colors hover:text-white">Privacy Policy</a>
                         <a href="/terms-and-conditions" className="text-sm text-slate-400 transition-colors hover:text-white">Terms &amp; Conditions</a>
+                        <a href="/information-security-policy" className="text-sm text-slate-400 transition-colors hover:text-white">Information Security Policy</a>
                     </div>
                     <p className="text-sm text-slate-500">© {new Date().getFullYear()} KabirTech Solutions</p>
                 </div>

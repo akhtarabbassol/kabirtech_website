@@ -1,7 +1,9 @@
 ## Pages
 - [Company | KabirTech Solutions](/company): KabirTech Solutions is an AI engineering studio built around senior people — our story, our process, and the team behind it.
 - [Contact | KabirTech Solutions](/contact): Tell KabirTech Solutions what you're building. A principal engineer replies within one business day, and the first scoping call is free.
+- [Information Security Policy | KabirTech Solutions](/information-security-policy): The security principles KabirTech Solutions applies to kabirtechsolutions.com and to client software engagements.
 - [KabirTech Solutions | AI Engineering Studio & Custom Software](/): KabirTech Solutions is an AI engineering studio and software product company, building AI systems, custom software, mobile apps and cloud platforms for companies in finance, healthcare and logistics — serving clients across the US, UK, Australia and worldwide.
+- [Partnerships | KabirTech Solutions](/partnerships): Technology, referral and delivery partnerships with KabirTech Solutions — an AI engineering studio serving clients across the US, UK, Australia and beyond.
 - [Privacy Policy | KabirTech Solutions](/privacy-policy): How KabirTech Solutions collects, uses and protects information submitted through kabirtechsolutions.com.
 - [Products | KabirTech Solutions](/products): Postora AI, Callora AI and Mediora AI — the AI products KabirTech Solutions builds and runs itself, in production.
 - [Services | KabirTech Solutions](/services): AI-native engineering across the whole product lifecycle — custom software, AI & ML, mobile apps, cloud & DevOps, product design and dedicated teams.
