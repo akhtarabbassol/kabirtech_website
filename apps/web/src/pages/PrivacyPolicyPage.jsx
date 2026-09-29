@@ -4,12 +4,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Seo from '@/components/Seo';
 
-const EFFECTIVE_DATE = 'August 27, 2026';
+const EFFECTIVE_DATE = 'September 29, 2026';
 
 const SECTIONS = [{
   title: '1. Who we are',
   body: [
-    'This policy covers kabirtechsolutions.com, operated by KabirTech Solutions ("KabirTech", "we", "us"), 1200 Congress Ave, Suite 460, Austin, TX. It explains what information we collect through this website, why, and what choices you have.'
+    'This policy covers kabirtechsolutions.com, operated by Kabir AI ("Kabir AI", "we", "us"), formerly known as KabirTech Solutions, 1200 Congress Ave, Suite 460, Austin, TX. It explains what information we collect through this website, why, and what choices you have.'
   ]
 }, {
   title: '2. Information we collect',
@@ -65,7 +65,7 @@ const SECTIONS = [{
 }, {
   title: '11. Contact us',
   body: [
-    'Questions about this policy or your data: info@kabirtechsolutions.com, or write to KabirTech Solutions, 1200 Congress Ave, Suite 460, Austin, TX.'
+    'Questions about this policy or your data: info@kabirtechsolutions.com, or write to Kabir AI, 1200 Congress Ave, Suite 460, Austin, TX.'
   ]
 }];
 
@@ -73,14 +73,14 @@ export default function PrivacyPolicyPage() {
   return <div className="bg-background">
             {/* Static source-text target for tools/generate-llms.js — see HomePage.jsx for why. */}
             <Helmet>
-                <title>Privacy Policy | KabirTech Solutions</title>
-                <meta name="description" content="How KabirTech Solutions collects, uses and protects information submitted through kabirtechsolutions.com." />
+                <title>Privacy Policy | Kabir AI</title>
+                <meta name="description" content="How Kabir AI collects, uses and protects information submitted through kabirtechsolutions.com." />
             </Helmet>
             <Seo
-                title="Privacy Policy | KabirTech Solutions"
-                description="How KabirTech Solutions collects, uses and protects information submitted through kabirtechsolutions.com."
+                title="Privacy Policy | Kabir AI"
+                description="How Kabir AI collects, uses and protects information submitted through kabirtechsolutions.com."
                 url="https://kabirtechsolutions.com/privacy-policy"
-                siteName="KabirTech Solutions"
+                siteName="Kabir AI"
             />
 
             <Header />

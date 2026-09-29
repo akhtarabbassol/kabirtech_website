@@ -31,7 +31,7 @@ const PARTNERSHIPS_PAGE_SCHEMA = {
   '@type': 'WebPage',
   '@id': 'https://kabirtechsolutions.com/partnerships#page',
   url: 'https://kabirtechsolutions.com/partnerships',
-  name: 'Partnerships | KabirTech Solutions',
+  name: 'Partnerships | Kabir AI',
   about: { '@id': 'https://kabirtechsolutions.com/#organization' }
 };
 
@@ -39,14 +39,14 @@ export default function PartnershipsPage() {
   return <div className="bg-background">
             {/* Static source-text target for tools/generate-llms.js — see HomePage.jsx for why. */}
             <Helmet>
-                <title>Partnerships | KabirTech Solutions</title>
-                <meta name="description" content="Technology, referral and delivery partnerships with KabirTech Solutions — an AI engineering studio serving clients across the US, UK, Australia and beyond." />
+                <title>Partnerships | Kabir AI</title>
+                <meta name="description" content="Technology, referral and delivery partnerships with Kabir AI — an AI engineering studio serving clients across the US, UK, Australia and beyond." />
             </Helmet>
             <Seo
-                title="Partnerships | KabirTech Solutions"
-                description="Technology, referral and delivery partnerships with KabirTech Solutions — an AI engineering studio serving clients across the US, UK, Australia and beyond."
+                title="Partnerships | Kabir AI"
+                description="Technology, referral and delivery partnerships with Kabir AI — an AI engineering studio serving clients across the US, UK, Australia and beyond."
                 url="https://kabirtechsolutions.com/partnerships"
-                siteName="KabirTech Solutions"
+                siteName="Kabir AI"
                 jsonLd={[PARTNERSHIPS_PAGE_SCHEMA]}
             />
 
@@ -58,7 +58,7 @@ export default function PartnershipsPage() {
                         <Reveal>
                             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky-400">Work with us</p>
                             <h1 className="mt-4 max-w-2xl font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
-                                Build and grow with KabirTech
+                                Build and grow with Kabir AI
                             </h1>
                             <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-300">
                                 We partner with technology platforms, referral partners and delivery partners who want senior AI and

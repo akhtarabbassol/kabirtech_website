@@ -1,2 +1,2 @@
 # kabirtech_website
-Website of kabirtech solutions
+Website of Kabir AI (formerly KabirTech Solutions)

@@ -6,7 +6,7 @@ import { ArrowUpRight, BrainCircuit, Cloud, Code2, Layers, ShieldCheck, Smartpho
 import CountUp from '@/components/CountUp';
 import Reveal from '@/components/Reveal';
 import Seo from '@/components/Seo';
-import Header, { LOGO } from '@/components/Header';
+import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const BANNER = 'https://horizons-cdn.hostinger.com/b01990a9-0b3d-4660-9a5b-7fcbea39cb56/dbffa1f63f69611038171b3068a16cbe.jpg';
@@ -274,7 +274,7 @@ function Hero() {
           delay: 0.16,
           ease: 'easeOut'
         }} className="mt-8 max-w-xl text-lg leading-relaxed text-slate-300">
-                        KabirTech Solutions is an AI engineering studio — equal parts product company and project partner. We
+                        Kabir AI is an AI engineering studio — equal parts product company and project partner. We
                         build our own AI products, and we design, build and operate production AI systems for clients across
                         the US, UK, Australia and beyond. Senior engineers, fixed sprints, code you own outright.
                     </motion.p>
@@ -458,11 +458,12 @@ const ORGANIZATION_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   '@id': 'https://kabirtechsolutions.com/#organization',
-  name: 'KabirTech Solutions',
+  name: 'Kabir AI',
+  alternateName: 'KabirTech Solutions',
   url: 'https://kabirtechsolutions.com/',
-  logo: LOGO,
+  logo: 'https://kabirtechsolutions.com/icon.svg',
   image: BANNER,
-  description: 'KabirTech Solutions is an AI engineering studio and software product company, building AI systems, custom software, mobile apps and cloud platforms for companies in finance, healthcare and logistics — serving clients across the US, UK, Australia and worldwide.',
+  description: 'Kabir AI (formerly KabirTech Solutions) is an AI engineering studio and software product company, building AI systems, custom software, mobile apps and cloud platforms for companies in finance, healthcare and logistics — serving clients across the US, UK, Australia and worldwide.',
   email: 'info@kabirtechsolutions.com',
   telephone: '+9 (232) 148-29814',
   foundingDate: '2014',
@@ -488,7 +489,8 @@ const WEBSITE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   '@id': 'https://kabirtechsolutions.com/#website',
-  name: 'KabirTech Solutions',
+  name: 'Kabir AI',
+  alternateName: 'KabirTech Solutions',
   url: 'https://kabirtechsolutions.com/',
   publisher: { '@id': 'https://kabirtechsolutions.com/#organization' }
 };
@@ -497,15 +499,15 @@ export default function HomePage() {
             {/* This block is a static source-text target for tools/generate-llms.js at
                 build time, not a functioning head manager — <Seo> below does the real work. */}
             <Helmet>
-                <title>KabirTech Solutions | AI Engineering Studio &amp; Custom Software</title>
-                <meta name="description" content="KabirTech Solutions is an AI engineering studio and software product company, building AI systems, custom software, mobile apps and cloud platforms for companies in finance, healthcare and logistics — serving clients across the US, UK, Australia and worldwide." />
+                <title>Kabir AI | AI Engineering Studio &amp; Custom Software (formerly KabirTech Solutions)</title>
+                <meta name="description" content="Kabir AI (formerly KabirTech Solutions) is an AI engineering studio and software product company, building AI systems, custom software, mobile apps and cloud platforms for companies in finance, healthcare and logistics — serving clients across the US, UK, Australia and worldwide." />
             </Helmet>
             <Seo
-                title="KabirTech Solutions | AI Engineering Studio & Custom Software"
-                description="AI-native software, engineered to ship — applied AI products and custom project delivery from senior engineers in two-week sprints, for clients across the US, UK, Australia and beyond."
-                keywords="AI engineering studio, AI development company, software product company, custom software development company, machine learning consulting, mobile app development, cloud DevOps services, dedicated engineering teams, software development USA, software development UK, software development Australia, Postora AI, Callora AI, Mediora AI"
+                title="Kabir AI | AI Engineering Studio & Custom Software (formerly KabirTech Solutions)"
+                description="AI-native software, engineered to ship — applied AI products and custom project delivery from senior engineers in two-week sprints, for clients across the US, UK, Australia and beyond. Kabir AI was formerly known as KabirTech Solutions."
+                keywords="AI engineering studio, AI development company, software product company, custom software development company, machine learning consulting, mobile app development, cloud DevOps services, dedicated engineering teams, software development USA, software development UK, software development Australia, Postora AI, Callora AI, Mediora AI, Kabir AI, KabirTech Solutions"
                 image={BANNER}
-                siteName="KabirTech Solutions"
+                siteName="Kabir AI"
                 jsonLd={[ORGANIZATION_SCHEMA, WEBSITE_SCHEMA]}
             />
 

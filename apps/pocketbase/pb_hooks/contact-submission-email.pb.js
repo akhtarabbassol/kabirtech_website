@@ -15,7 +15,7 @@ onRecordAfterCreateSuccess((e) => {
 
     const html = `
         <h2>New contact form submission</h2>
-        <p>A new project brief was submitted via the KabirTech Solutions website.</p>
+        <p>A new project brief was submitted via the Kabir AI website.</p>
         <table style="border-collapse:collapse;font-family:Inter,Arial,sans-serif;font-size:14px;">
             <tr><td style="padding:6px 12px;color:#555;">Name</td><td style="padding:6px 12px;"><strong>${name}</strong></td></tr>
             <tr><td style="padding:6px 12px;color:#555;">Email</td><td style="padding:6px 12px;"><a href="mailto:${email}">${email}</a></td></tr>
@@ -29,7 +29,7 @@ onRecordAfterCreateSuccess((e) => {
     `;
 
     const mailMessage = new MailerMessage({
-        from: { name: "KabirTech Solutions" },
+        from: { name: "Kabir AI" },
         to: [{ address: "info@kabirtechsolutions.com" }],
         subject,
         html,

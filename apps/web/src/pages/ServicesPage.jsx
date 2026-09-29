@@ -105,14 +105,14 @@ export default function ServicesPage() {
   return <div className="bg-background">
             {/* Static source-text target for tools/generate-llms.js — see HomePage.jsx for why. */}
             <Helmet>
-                <title>Services | KabirTech Solutions</title>
+                <title>Services | Kabir AI</title>
                 <meta name="description" content="AI-native engineering across the whole product lifecycle — custom software, AI & ML, mobile apps, cloud & DevOps, product design and dedicated teams." />
             </Helmet>
             <Seo
-                title="Services | KabirTech Solutions"
+                title="Services | Kabir AI"
                 description="AI-native engineering across the whole product lifecycle — custom software, AI & ML, mobile apps, cloud & DevOps, product design and dedicated teams, for clients across the US, UK, Australia and beyond."
                 url="https://kabirtechsolutions.com/services"
-                siteName="KabirTech Solutions"
+                siteName="Kabir AI"
                 jsonLd={[...SERVICE_SCHEMAS, FAQ_SCHEMA]}
             />
 

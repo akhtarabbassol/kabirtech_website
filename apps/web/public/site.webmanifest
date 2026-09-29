@@ -1,6 +1,6 @@
 {
-  "name": "KabirTech Solutions",
-  "short_name": "KabirTech",
+  "name": "Kabir AI",
+  "short_name": "Kabir AI",
   "description": "Custom software engineering and applied AI, delivered by senior engineers in two-week sprints.",
   "start_url": "/",
   "display": "standalone",
@@ -8,9 +8,14 @@
   "theme_color": "#050b16",
   "icons": [
     {
-      "src": "https://images.hostinger.com/b023482d-d91e-4a7f-9cd3-6dd9b259da3e.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ]
 }

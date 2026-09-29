@@ -191,14 +191,14 @@ export default function ProductsPage() {
   return <div className="bg-background">
             {/* Static source-text target for tools/generate-llms.js — see HomePage.jsx for why. */}
             <Helmet>
-                <title>Products | KabirTech Solutions</title>
-                <meta name="description" content="Postora AI, Callora AI and Mediora AI — the AI products KabirTech Solutions builds and runs itself, in production." />
+                <title>Products | Kabir AI</title>
+                <meta name="description" content="Postora AI, Callora AI and Mediora AI — the AI products Kabir AI builds and runs itself, in production." />
             </Helmet>
             <Seo
-                title="Products | KabirTech Solutions"
-                description="Postora AI, Callora AI and Mediora AI — the AI products KabirTech Solutions builds and runs itself, in production, not roadmap slides."
+                title="Products | Kabir AI"
+                description="Postora AI, Callora AI and Mediora AI — the AI products Kabir AI builds and runs itself, in production, not roadmap slides."
                 url="https://kabirtechsolutions.com/products"
-                siteName="KabirTech Solutions"
+                siteName="Kabir AI"
                 jsonLd={PRODUCT_SCHEMAS}
             />
 

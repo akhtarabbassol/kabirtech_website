@@ -4,12 +4,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Seo from '@/components/Seo';
 
-const EFFECTIVE_DATE = 'September 24, 2026';
+const EFFECTIVE_DATE = 'September 29, 2026';
 
 const SECTIONS = [{
   title: '1. Purpose and scope',
   body: [
-    'This policy describes the security principles KabirTech Solutions ("KabirTech", "we", "us") applies to kabirtechsolutions.com and to the software engagements we deliver for clients. It is a public summary of our approach, not an exhaustive technical specification.'
+    'This policy describes the security principles Kabir AI ("Kabir AI", "we", "us"), formerly known as KabirTech Solutions, applies to kabirtechsolutions.com and to the software engagements we deliver for clients. It is a public summary of our approach, not an exhaustive technical specification.'
   ]
 }, {
   title: '2. Data we handle',
@@ -25,7 +25,7 @@ const SECTIONS = [{
 }, {
   title: '4. Access control',
   body: [
-    'Access to systems holding client or prospect data is restricted to the KabirTech staff who need it to do their job, on a least-privilege basis. Access is revoked promptly when someone’s role changes or their engagement with us ends.'
+    'Access to systems holding client or prospect data is restricted to the Kabir AI staff who need it to do their job, on a least-privilege basis. Access is revoked promptly when someone’s role changes or their engagement with us ends.'
   ]
 }, {
   title: '5. Secure development practices',
@@ -61,7 +61,7 @@ const SECTIONS = [{
 }, {
   title: '11. Contact us',
   body: [
-    'Security questions or vulnerability reports: info@kabirtechsolutions.com, or write to KabirTech Solutions, 1200 Congress Ave, Suite 460, Austin, TX.'
+    'Security questions or vulnerability reports: info@kabirtechsolutions.com, or write to Kabir AI, 1200 Congress Ave, Suite 460, Austin, TX.'
   ]
 }];
 
@@ -70,7 +70,7 @@ const SECURITY_POLICY_SCHEMA = {
   '@type': 'WebPage',
   '@id': 'https://kabirtechsolutions.com/information-security-policy#page',
   url: 'https://kabirtechsolutions.com/information-security-policy',
-  name: 'Information Security Policy | KabirTech Solutions',
+  name: 'Information Security Policy | Kabir AI',
   about: { '@id': 'https://kabirtechsolutions.com/#organization' }
 };
 
@@ -78,14 +78,14 @@ export default function InformationSecurityPolicyPage() {
   return <div className="bg-background">
             {/* Static source-text target for tools/generate-llms.js — see HomePage.jsx for why. */}
             <Helmet>
-                <title>Information Security Policy | KabirTech Solutions</title>
-                <meta name="description" content="The security principles KabirTech Solutions applies to kabirtechsolutions.com and to client software engagements." />
+                <title>Information Security Policy | Kabir AI</title>
+                <meta name="description" content="The security principles Kabir AI applies to kabirtechsolutions.com and to client software engagements." />
             </Helmet>
             <Seo
-                title="Information Security Policy | KabirTech Solutions"
-                description="The security principles KabirTech Solutions applies to kabirtechsolutions.com and to client software engagements, including data handling, access control and incident response."
+                title="Information Security Policy | Kabir AI"
+                description="The security principles Kabir AI applies to kabirtechsolutions.com and to client software engagements, including data handling, access control and incident response."
                 url="https://kabirtechsolutions.com/information-security-policy"
-                siteName="KabirTech Solutions"
+                siteName="Kabir AI"
                 jsonLd={[SECURITY_POLICY_SCHEMA]}
             />
 

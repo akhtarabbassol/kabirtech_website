@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, Phone, X } from 'lucide-react';
 
-const LOGO = 'https://horizons-cdn.hostinger.com/b01990a9-0b3d-4660-9a5b-7fcbea39cb56/3ec973cacc742f86a2b43fe64ae98ee0.jpg';
+const LOGO = '/logo.svg';
 
 // Every section now lives on its own route, not a home-page anchor.
 const NAV = [{
@@ -46,14 +46,8 @@ function Header() {
 
   return <header className={`fixed inset-x-0 top-0 z-50 backdrop-blur-xl transition-all duration-300 ${scrolled ? 'bg-[hsl(var(--ink))]/95 shadow-lg shadow-black/20' : 'bg-[hsl(var(--ink))]/85'}`}>
             <div className={`mx-auto flex max-w-[90rem] items-center justify-between px-5 transition-all duration-300 sm:px-8 ${scrolled ? 'h-[60px]' : 'h-[72px]'}`}>
-                <a href="/" className="group flex items-center gap-3">
-                    <span className="relative flex h-11 w-11 shrink-0 items-center justify-center">
-                        <span className="absolute inset-0 rounded-xl bg-gradient-to-br from-sky-400 to-violet-400 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-40" aria-hidden="true" />
-                        <img src={LOGO} alt="KabirTech Solutions logo" className="relative h-11 w-11 rounded-xl object-cover object-left ring-1 ring-white/10 transition-all duration-300 group-hover:ring-sky-400/40" />
-                    </span>
-                    <span className="font-display text-lg font-bold tracking-tight text-white">
-                        Kabir<span className="text-sky-400">Tech</span>
-                    </span>
+                <a href="/" className="flex items-center transition-opacity duration-200 hover:opacity-80">
+                    <img src={LOGO} alt="Kabir AI logo" className="h-7 w-auto sm:h-8" />
                 </a>
 
                 <nav className="hidden items-center gap-9 md:flex">

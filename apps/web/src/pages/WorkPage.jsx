@@ -71,7 +71,7 @@ const COMPLETED = [{
   result: 'Migrated 6k accounts, zero downtime'
 }];
 const TESTIMONIALS = [{
-  quote: "KabirTech didn't just build what we asked for — they questioned the scope in ways that saved us six figures in year one.",
+  quote: "Kabir AI didn't just build what we asked for — they questioned the scope in ways that saved us six figures in year one.",
   name: 'Priya Desai',
   role: 'VP Engineering',
   company: 'Meridian Capital Partners'
@@ -95,7 +95,7 @@ const WORK_COLLECTION_SCHEMA = {
   '@type': 'CollectionPage',
   '@id': 'https://kabirtechsolutions.com/work#page',
   url: 'https://kabirtechsolutions.com/work',
-  name: 'Work | KabirTech Solutions',
+  name: 'Work | Kabir AI',
   about: { '@id': 'https://kabirtechsolutions.com/#organization' },
   mainEntity: {
     '@type': 'ItemList',
@@ -118,14 +118,14 @@ export default function WorkPage() {
   return <div className="bg-background">
             {/* Static source-text target for tools/generate-llms.js — see HomePage.jsx for why. */}
             <Helmet>
-                <title>Work | KabirTech Solutions</title>
-                <meta name="description" content="Case studies and delivered projects from KabirTech Solutions — systems running in production, with numbers attached." />
+                <title>Work | Kabir AI</title>
+                <meta name="description" content="Case studies and delivered projects from Kabir AI — systems running in production, with numbers attached." />
             </Helmet>
             <Seo
-                title="Work | KabirTech Solutions"
-                description="Case studies and delivered projects from KabirTech Solutions — systems running in production, with numbers attached, for clients across finance, healthcare, logistics and more."
+                title="Work | Kabir AI"
+                description="Case studies and delivered projects from Kabir AI — systems running in production, with numbers attached, for clients across finance, healthcare, logistics and more."
                 url="https://kabirtechsolutions.com/work"
-                siteName="KabirTech Solutions"
+                siteName="Kabir AI"
                 jsonLd={[WORK_COLLECTION_SCHEMA]}
             />
 

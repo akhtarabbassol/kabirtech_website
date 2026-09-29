@@ -42,7 +42,7 @@ const ABOUT_PAGE_SCHEMA = {
   '@type': 'AboutPage',
   '@id': 'https://kabirtechsolutions.com/company#page',
   url: 'https://kabirtechsolutions.com/company',
-  name: 'Company | KabirTech Solutions',
+  name: 'Company | Kabir AI',
   mainEntity: { '@id': 'https://kabirtechsolutions.com/#organization' },
   about: {
     '@type': 'ProfessionalService',
@@ -59,14 +59,14 @@ export default function CompanyPage() {
   return <div className="bg-background">
             {/* Static source-text target for tools/generate-llms.js — see HomePage.jsx for why. */}
             <Helmet>
-                <title>Company | KabirTech Solutions</title>
-                <meta name="description" content="KabirTech Solutions is an AI engineering studio built around senior people — our story, our process, and the team behind it." />
+                <title>Company | Kabir AI</title>
+                <meta name="description" content="Kabir AI is an AI engineering studio built around senior people — our story, our process, and the team behind it." />
             </Helmet>
             <Seo
-                title="Company | KabirTech Solutions"
-                description="An AI engineering studio built around senior people. Our story, our four-step delivery process, and the team behind KabirTech Solutions."
+                title="Company | Kabir AI"
+                description="An AI engineering studio built around senior people. Our story, our four-step delivery process, and the team behind Kabir AI."
                 url="https://kabirtechsolutions.com/company"
-                siteName="KabirTech Solutions"
+                siteName="Kabir AI"
                 image={TEAM_PHOTO}
                 jsonLd={[ABOUT_PAGE_SCHEMA]}
             />
@@ -80,7 +80,7 @@ export default function CompanyPage() {
                     <div className="relative mx-auto max-w-[80rem] px-5 sm:px-8">
                         <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
                             <Reveal>
-                                <img src={TEAM_PHOTO} alt="The KabirTech Solutions engineering team at work" className="w-full rounded-2xl object-cover shadow-xl shadow-slate-900/10" loading="lazy" />
+                                <img src={TEAM_PHOTO} alt="The Kabir AI engineering team at work" className="w-full rounded-2xl object-cover shadow-xl shadow-slate-900/10" loading="lazy" />
                             </Reveal>
                             <Reveal delay={0.08}>
                                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">The company</p>
@@ -88,7 +88,7 @@ export default function CompanyPage() {
                                     An AI engineering studio built around senior people
                                 </h1>
                                 <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                                    KabirTech Solutions started in 2014 with three engineers and one belief: clients deserve the people who
+                                    Kabir AI (formerly KabirTech Solutions) started in 2014 with three engineers and one belief: clients deserve the people who
                                     scoped the project to be the ones who write it. Today we are thirty-eight engineers, applied AI
                                     specialists and data scientists working with scale-ups and established operators across finance,
                                     healthcare and logistics — primarily in the US, UK and Australia, with clients further afield too.
@@ -113,7 +113,7 @@ export default function CompanyPage() {
                             {TEAM.map((t, i) => <Reveal key={t.name} delay={i * 0.06}>
                                     <div className="group">
                                         <div className="overflow-hidden rounded-xl">
-                                            <img src={t.img} alt={`${t.name}, ${t.role} at KabirTech Solutions`} className="aspect-[3/4] w-full object-cover grayscale transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0" loading="lazy" />
+                                            <img src={t.img} alt={`${t.name}, ${t.role} at Kabir AI`} className="aspect-[3/4] w-full object-cover grayscale transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0" loading="lazy" />
                                         </div>
                                         <h3 className="mt-4 font-display text-lg font-semibold">{t.name}</h3>
                                         <p className="text-sm text-muted-foreground">{t.role}</p>

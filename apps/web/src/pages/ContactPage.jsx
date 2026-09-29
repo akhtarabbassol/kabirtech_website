@@ -14,7 +14,7 @@ const CONTACT_PAGE_SCHEMA = {
   '@type': 'ContactPage',
   '@id': 'https://kabirtechsolutions.com/contact#page',
   url: 'https://kabirtechsolutions.com/contact',
-  name: 'Contact | KabirTech Solutions',
+  name: 'Contact | Kabir AI',
   mainEntity: {
     '@id': 'https://kabirtechsolutions.com/#organization',
     '@type': 'ProfessionalService',
@@ -59,14 +59,14 @@ export default function ContactPage() {
   return <div className="bg-background">
             {/* Static source-text target for tools/generate-llms.js — see HomePage.jsx for why. */}
             <Helmet>
-                <title>Contact | KabirTech Solutions</title>
-                <meta name="description" content="Tell KabirTech Solutions what you're building. A principal engineer replies within one business day, and the first scoping call is free." />
+                <title>Contact | Kabir AI</title>
+                <meta name="description" content="Tell Kabir AI what you're building. A principal engineer replies within one business day, and the first scoping call is free." />
             </Helmet>
             <Seo
-                title="Contact | KabirTech Solutions"
-                description="Tell KabirTech Solutions what you're building. A principal engineer replies within one business day, and the first scoping call is free — no sales team in between."
+                title="Contact | Kabir AI"
+                description="Tell Kabir AI what you're building. A principal engineer replies within one business day, and the first scoping call is free — no sales team in between."
                 url="https://kabirtechsolutions.com/contact"
-                siteName="KabirTech Solutions"
+                siteName="Kabir AI"
                 jsonLd={[CONTACT_PAGE_SCHEMA]}
             />
 
@@ -88,7 +88,7 @@ export default function ContactPage() {
                             </p>
 
                             <ul className="mt-10 space-y-5 text-slate-300">
-                                <li className="flex items-center gap-4"><Mail className="h-5 w-5 text-sky-400" /><a href="mailto:hello@kabirtech.solutions" className="hover:text-white">info@kabirtechsolutions.com</a></li>
+                                <li className="flex items-center gap-4"><Mail className="h-5 w-5 text-sky-400" /><a href="mailto:info@kabirtechsolutions.com" className="hover:text-white">info@kabirtechsolutions.com</a></li>
                                 <li className="flex items-center gap-4"><Phone className="h-5 w-5 text-sky-400" /><a href="tel:+15551240188" className="hover:text-white">+9 (232) 148-29814</a></li>
                                 <li className="flex items-center gap-4"><MapPin className="h-5 w-5 text-sky-400" />1200 Congress Ave, Suite 460, Austin, TX</li>
                             </ul>

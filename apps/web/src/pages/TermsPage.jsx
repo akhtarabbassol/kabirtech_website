@@ -4,17 +4,17 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Seo from '@/components/Seo';
 
-const EFFECTIVE_DATE = 'August 27, 2026';
+const EFFECTIVE_DATE = 'September 29, 2026';
 
 const SECTIONS = [{
   title: '1. Acceptance of these terms',
   body: [
-    'These Terms of Use govern your use of kabirtechsolutions.com, operated by KabirTech Solutions ("KabirTech", "we", "us"), 1200 Congress Ave, Suite 460, Austin, TX. By browsing this website or submitting the contact form, you agree to these terms. If you don’t agree, please don’t use the site.'
+    'These Terms of Use govern your use of kabirtechsolutions.com, operated by Kabir AI ("Kabir AI", "we", "us"), formerly known as KabirTech Solutions, 1200 Congress Ave, Suite 460, Austin, TX. By browsing this website or submitting the contact form, you agree to these terms. If you don’t agree, please don’t use the site.'
   ]
 }, {
   title: '2. What this website is',
   body: [
-    'This site is informational: it describes KabirTech’s services and products (including Postora AI, Callora AI and Mediora AI) and lets you get in touch about a project. Nothing on this site is an offer to contract, and browsing it doesn’t create a client relationship, engagement, or subscription with KabirTech.',
+    'This site is informational: it describes Kabir AI’s services and products (including Postora AI, Callora AI and Mediora AI) and lets you get in touch about a project. Nothing on this site is an offer to contract, and browsing it doesn’t create a client relationship, engagement, or subscription with Kabir AI.',
     'Feature walkthroughs for Postora AI, Callora AI and Mediora AI on this site — including the interactive product demo in the hero section — use illustrative, simulated responses to show how each product works. They are not connected to a live AI backend or your real business or patient data.'
   ]
 }, {
@@ -25,7 +25,7 @@ const SECTIONS = [{
 }, {
   title: '4. Intellectual property',
   body: [
-    'The text, design, graphics, and code that make up this website, and the KabirTech, Postora AI, Callora AI, and Mediora AI names and logos, belong to KabirTech Solutions unless otherwise noted. You may view and share pages of this site for personal, non-commercial reference, but you may not copy, republish, or reuse our content, branding, or product names without our written permission.'
+    'The text, design, graphics, and code that make up this website, and the Kabir AI, Postora AI, Callora AI, and Mediora AI names and logos, belong to Kabir AI unless otherwise noted. You may view and share pages of this site for personal, non-commercial reference, but you may not copy, republish, or reuse our content, branding, or product names without our written permission.'
   ]
 }, {
   title: '5. Contact form submissions',
@@ -35,7 +35,7 @@ const SECTIONS = [{
 }, {
   title: '6. Client engagements',
   body: [
-    'If a project moves forward after you contact us, the scope, pricing, timeline, and other commercial terms are set out in a separate, signed agreement between KabirTech and the client — not by this website. These Terms of Use apply only to your use of the website itself.'
+    'If a project moves forward after you contact us, the scope, pricing, timeline, and other commercial terms are set out in a separate, signed agreement between Kabir AI and the client — not by this website. These Terms of Use apply only to your use of the website itself.'
   ]
 }, {
   title: '7. Third-party services',
@@ -50,7 +50,7 @@ const SECTIONS = [{
 }, {
   title: '9. Limitation of liability',
   body: [
-    'To the extent permitted by law, KabirTech isn’t liable for indirect, incidental, or consequential damages arising from your use of, or inability to use, this website. Nothing here limits liability that can’t be limited under applicable law.'
+    'To the extent permitted by law, Kabir AI isn’t liable for indirect, incidental, or consequential damages arising from your use of, or inability to use, this website. Nothing here limits liability that can’t be limited under applicable law.'
   ]
 }, {
   title: '10. Links to other sites',
@@ -70,7 +70,7 @@ const SECTIONS = [{
 }, {
   title: '13. Contact us',
   body: [
-    'Questions about these terms: info@kabirtechsolutions.com, or write to KabirTech Solutions, 1200 Congress Ave, Suite 460, Austin, TX.'
+    'Questions about these terms: info@kabirtechsolutions.com, or write to Kabir AI, 1200 Congress Ave, Suite 460, Austin, TX.'
   ]
 }];
 
@@ -78,14 +78,14 @@ export default function TermsPage() {
   return <div className="bg-background">
             {/* Static source-text target for tools/generate-llms.js — see HomePage.jsx for why. */}
             <Helmet>
-                <title>Terms &amp; Conditions | KabirTech Solutions</title>
+                <title>Terms &amp; Conditions | Kabir AI</title>
                 <meta name="description" content="The terms that govern your use of kabirtechsolutions.com." />
             </Helmet>
             <Seo
-                title="Terms & Conditions | KabirTech Solutions"
+                title="Terms & Conditions | Kabir AI"
                 description="The terms that govern your use of kabirtechsolutions.com."
                 url="https://kabirtechsolutions.com/terms-and-conditions"
-                siteName="KabirTech Solutions"
+                siteName="Kabir AI"
             />
 
             <Header />
