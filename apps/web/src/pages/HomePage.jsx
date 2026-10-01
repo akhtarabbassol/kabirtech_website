@@ -483,7 +483,11 @@ const ORGANIZATION_SCHEMA = {
   }, {
     '@type': 'Country',
     name: 'Australia'
-  }]
+  }],
+  sameAs: [
+    'https://www.linkedin.com/company/kabirai',
+    'https://www.facebook.com/people/KabirTech-Solutions/61593669463224/'
+  ]
 };
 const WEBSITE_SCHEMA = {
   '@context': 'https://schema.org',

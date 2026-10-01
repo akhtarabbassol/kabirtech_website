@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Activity, ArrowUpRight, BarChart3, BookUser, Captions, CalendarDays, Clock, FileSearch, Hash, Headset, Image as ImageIcon, Inbox, Languages, LineChart, ListChecks, Lock, Megaphone, Mic, PenLine, PhoneCall, Repeat, Search, ShieldCheck, Sparkles, Stethoscope, Target, TrendingUp, UserCheck, UserPlus, Users, Video, Wallet, Youtube } from 'lucide-react';
+import { Activity, ArrowUpRight, BarChart3, BookUser, Captions, CalendarDays, ClipboardList, Clock, FileSearch, Hash, Headset, Image as ImageIcon, Inbox, Languages, LineChart, ListChecks, Lock, Megaphone, Mic, PenLine, PhoneCall, Pill, Repeat, Search, ShieldCheck, Sparkles, Stethoscope, Target, TrendingUp, UserCheck, UserPlus, Users, Video, Wallet, Youtube } from 'lucide-react';
 import Reveal from '@/components/Reveal';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -171,6 +171,25 @@ const PRODUCTS = [{
     title: 'Support & Disputes',
     copy: 'Built-in ticketing and dispute handling for patients, doctors and admins.'
   }]
+}, {
+  name: 'Mediora CMR',
+  url: 'https://medioracmr.kabirtech.tech/login',
+  tag: 'Hospital SaaS platform',
+  tagline: 'One platform for the whole hospital.',
+  copy: 'Mediora CMR is the multi-tenant hospital SaaS platform behind the Mediora healthcare family — hospitals onboard, manage staff, and run the full clinical chart, pharmacy, labs and billing from one secure workspace.',
+  features: [{
+    icon: ClipboardList,
+    title: 'Clinical Chart & Encounters',
+    copy: 'Run the full patient clinical chart and encounters in one workspace, from intake to discharge.'
+  }, {
+    icon: Pill,
+    title: 'Pharmacy & Lab Orders',
+    copy: 'Pharmacy and lab orders are placed and billed straight to the patient invoice.'
+  }, {
+    icon: ShieldCheck,
+    title: 'Multi-Tenant Access Control',
+    copy: 'Every hospital is tenant-isolated with role-based access, so staff only see what their role permits.'
+  }]
 }];
 
 const PRODUCT_SCHEMAS = PRODUCTS.map(p => ({
@@ -192,11 +211,11 @@ export default function ProductsPage() {
             {/* Static source-text target for tools/generate-llms.js — see HomePage.jsx for why. */}
             <Helmet>
                 <title>Products | Kabir AI</title>
-                <meta name="description" content="Postora AI, Callora AI and Mediora AI — the AI products Kabir AI builds and runs itself, in production." />
+                <meta name="description" content="Postora AI, Callora AI, Mediora AI and Mediora CMR — the products Kabir AI builds and runs itself, in production." />
             </Helmet>
             <Seo
                 title="Products | Kabir AI"
-                description="Postora AI, Callora AI and Mediora AI — the AI products Kabir AI builds and runs itself, in production, not roadmap slides."
+                description="Postora AI, Callora AI, Mediora AI and Mediora CMR — the products Kabir AI builds and runs itself, in production, not roadmap slides."
                 url="https://kabirtechsolutions.com/products"
                 siteName="Kabir AI"
                 jsonLd={PRODUCT_SCHEMAS}
