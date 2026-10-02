@@ -88,7 +88,7 @@ export default function CompanyPage() {
                                     An AI engineering studio built around senior people
                                 </h1>
                                 <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                                    Kabir AI (formerly KabirTech Solutions) started in 2014 with three engineers and one belief: clients deserve the people who
+                                    Kabir AI started in 2014 with three engineers and one belief: clients deserve the people who
                                     scoped the project to be the ones who write it. Today we are thirty-eight engineers, applied AI
                                     specialists and data scientists working with scale-ups and established operators across finance,
                                     healthcare and logistics — primarily in the US, UK and Australia, with clients further afield too.

@@ -9,7 +9,7 @@ const EFFECTIVE_DATE = 'September 29, 2026';
 const SECTIONS = [{
   title: '1. Who we are',
   body: [
-    'This policy covers kabirtechsolutions.com, operated by Kabir AI ("Kabir AI", "we", "us"), formerly known as KabirTech Solutions, 1200 Congress Ave, Suite 460, Austin, TX. It explains what information we collect through this website, why, and what choices you have.'
+    'This policy covers kabirtechsolutions.com, operated by Kabir AI ("Kabir AI", "we", "us"), 1200 Congress Ave, Suite 460, Austin, TX. It explains what information we collect through this website, why, and what choices you have.'
   ]
 }, {
   title: '2. Information we collect',

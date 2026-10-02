@@ -459,11 +459,10 @@ const ORGANIZATION_SCHEMA = {
   '@type': 'ProfessionalService',
   '@id': 'https://kabirtechsolutions.com/#organization',
   name: 'Kabir AI',
-  alternateName: 'KabirTech Solutions',
   url: 'https://kabirtechsolutions.com/',
   logo: 'https://kabirtechsolutions.com/icon.svg',
   image: BANNER,
-  description: 'Kabir AI (formerly KabirTech Solutions) is an AI engineering studio and software product company, building AI systems, custom software, mobile apps and cloud platforms for companies in finance, healthcare and logistics — serving clients across the US, UK, Australia and worldwide.',
+  description: 'Kabir AI is an AI engineering studio and software product company, building AI systems, custom software, mobile apps and cloud platforms for companies in finance, healthcare and logistics — serving clients across the US, UK, Australia and worldwide.',
   email: 'info@kabirtechsolutions.com',
   telephone: '+9 (232) 148-29814',
   foundingDate: '2014',
@@ -494,7 +493,6 @@ const WEBSITE_SCHEMA = {
   '@type': 'WebSite',
   '@id': 'https://kabirtechsolutions.com/#website',
   name: 'Kabir AI',
-  alternateName: 'KabirTech Solutions',
   url: 'https://kabirtechsolutions.com/',
   publisher: { '@id': 'https://kabirtechsolutions.com/#organization' }
 };
@@ -503,13 +501,13 @@ export default function HomePage() {
             {/* This block is a static source-text target for tools/generate-llms.js at
                 build time, not a functioning head manager — <Seo> below does the real work. */}
             <Helmet>
-                <title>Kabir AI | AI Engineering Studio &amp; Custom Software (formerly KabirTech Solutions)</title>
-                <meta name="description" content="Kabir AI (formerly KabirTech Solutions) is an AI engineering studio and software product company, building AI systems, custom software, mobile apps and cloud platforms for companies in finance, healthcare and logistics — serving clients across the US, UK, Australia and worldwide." />
+                <title>Kabir AI | AI Engineering Studio &amp; Custom Software</title>
+                <meta name="description" content="Kabir AI is an AI engineering studio and software product company, building AI systems, custom software, mobile apps and cloud platforms for companies in finance, healthcare and logistics — serving clients across the US, UK, Australia and worldwide." />
             </Helmet>
             <Seo
-                title="Kabir AI | AI Engineering Studio & Custom Software (formerly KabirTech Solutions)"
-                description="AI-native software, engineered to ship — applied AI products and custom project delivery from senior engineers in two-week sprints, for clients across the US, UK, Australia and beyond. Kabir AI was formerly known as KabirTech Solutions."
-                keywords="AI engineering studio, AI development company, software product company, custom software development company, machine learning consulting, mobile app development, cloud DevOps services, dedicated engineering teams, software development USA, software development UK, software development Australia, Postora AI, Callora AI, Mediora AI, Kabir AI, KabirTech Solutions"
+                title="Kabir AI | AI Engineering Studio & Custom Software"
+                description="AI-native software, engineered to ship — applied AI products and custom project delivery from senior engineers in two-week sprints, for clients across the US, UK, Australia and beyond."
+                keywords="AI engineering studio, AI development company, software product company, custom software development company, machine learning consulting, mobile app development, cloud DevOps services, dedicated engineering teams, software development USA, software development UK, software development Australia, Postora AI, Callora AI, Mediora AI, Kabir AI"
                 image={BANNER}
                 siteName="Kabir AI"
                 jsonLd={[ORGANIZATION_SCHEMA, WEBSITE_SCHEMA]}

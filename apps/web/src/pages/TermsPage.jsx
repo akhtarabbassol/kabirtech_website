@@ -9,7 +9,7 @@ const EFFECTIVE_DATE = 'September 29, 2026';
 const SECTIONS = [{
   title: '1. Acceptance of these terms',
   body: [
-    'These Terms of Use govern your use of kabirtechsolutions.com, operated by Kabir AI ("Kabir AI", "we", "us"), formerly known as KabirTech Solutions, 1200 Congress Ave, Suite 460, Austin, TX. By browsing this website or submitting the contact form, you agree to these terms. If you don’t agree, please don’t use the site.'
+    'These Terms of Use govern your use of kabirtechsolutions.com, operated by Kabir AI ("Kabir AI", "we", "us"), 1200 Congress Ave, Suite 460, Austin, TX. By browsing this website or submitting the contact form, you agree to these terms. If you don’t agree, please don’t use the site.'
   ]
 }, {
   title: '2. What this website is',

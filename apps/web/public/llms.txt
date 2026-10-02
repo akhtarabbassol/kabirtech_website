@@ -2,7 +2,7 @@
 - [Company | Kabir AI](/company): Kabir AI is an AI engineering studio built around senior people — our story, our process, and the team behind it.
 - [Contact | Kabir AI](/contact): Tell Kabir AI what you're building. A principal engineer replies within one business day, and the first scoping call is free.
 - [Information Security Policy | Kabir AI](/information-security-policy): The security principles Kabir AI applies to kabirtechsolutions.com and to client software engagements.
-- [Kabir AI | AI Engineering Studio & Custom Software (formerly KabirTech Solutions)](/): Kabir AI (formerly KabirTech Solutions) is an AI engineering studio and software product company, building AI systems, custom software, mobile apps and cloud platforms for companies in finance, healthcare and logistics — serving clients across the US, UK, Australia and worldwide.
+- [Kabir AI | AI Engineering Studio & Custom Software](/): Kabir AI is an AI engineering studio and software product company, building AI systems, custom software, mobile apps and cloud platforms for companies in finance, healthcare and logistics — serving clients across the US, UK, Australia and worldwide.
 - [Partnerships | Kabir AI](/partnerships): Technology, referral and delivery partnerships with Kabir AI — an AI engineering studio serving clients across the US, UK, Australia and beyond.
 - [Privacy Policy | Kabir AI](/privacy-policy): How Kabir AI collects, uses and protects information submitted through kabirtechsolutions.com.
 - [Products | Kabir AI](/products): Postora AI, Callora AI and Mediora AI — the AI products Kabir AI builds and runs itself, in production.

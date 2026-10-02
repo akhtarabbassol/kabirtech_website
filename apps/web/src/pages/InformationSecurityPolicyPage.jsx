@@ -9,7 +9,7 @@ const EFFECTIVE_DATE = 'September 29, 2026';
 const SECTIONS = [{
   title: '1. Purpose and scope',
   body: [
-    'This policy describes the security principles Kabir AI ("Kabir AI", "we", "us"), formerly known as KabirTech Solutions, applies to kabirtechsolutions.com and to the software engagements we deliver for clients. It is a public summary of our approach, not an exhaustive technical specification.'
+    'This policy describes the security principles Kabir AI ("Kabir AI", "we", "us") applies to kabirtechsolutions.com and to the software engagements we deliver for clients. It is a public summary of our approach, not an exhaustive technical specification.'
   ]
 }, {
   title: '2. Data we handle',
